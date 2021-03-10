@@ -3,7 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: Nunito, sans-serif;
 }
 
 li {
@@ -15,9 +14,11 @@ a {
 }
 
 body {
+  height: 3706px;
+  font-family: Nunito, sans-serif;
   background-color: #f8f8f8;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "header header header"
     "apresentacao apresentacao apresentacao"

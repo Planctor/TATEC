@@ -1,0 +1,46 @@
+.apresentacao {
+  color: #3c3b3b;
+  display: grid;
+  grid-template-columns: 500px 485px;
+  grid-template-areas: "texto img";
+  justify-content: center;
+  align-items: center;
+}
+
+.texto {
+  grid-area: texto;
+}
+
+.imgBook {
+  grid-area: img;
+}
+
+.imgBook img {
+  width: 500px;
+  height: 470px;
+  margin: 0 80px;
+}
+
+.texto h2 {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 60px;
+  position: relative;
+}
+
+.texto h2::before {
+  content: "";
+  background-image: url("../img/icones/Polygon4.svg");
+  background-size: 50px 40px;
+  height: 40px;
+  width: 50px;
+  display: inline-block;
+}
+
+.texto p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+}

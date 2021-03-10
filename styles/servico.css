@@ -1,0 +1,45 @@
+.servico {
+  color: #3c3b3b;
+  display: grid;
+  grid-template-columns: 720px 485px;
+  grid-template-areas: "img texto";
+  justify-content: center;
+  align-items: center;
+}
+
+.texto2 {
+  grid-area: texto;
+}
+
+.imgCoffe {
+  grid-area: img;
+}
+
+.imgCoffe img {
+  width: 724.73px;
+  height: 684.83px;
+}
+
+.texto2 h2 {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 60px;
+  position: relative;
+}
+
+.texto2 h2::before {
+  content: "";
+  background-image: url("../img/icones/Ellipse\ 29.svg");
+  background-size: 50px 40px;
+  height: 40px;
+  width: 50px;
+  display: inline-block;
+}
+
+.texto2 p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+}
