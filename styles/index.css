@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Nunito, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "apresentacao apresentacao apresentacao"
+    "servico servico servico"
+    "equipe equipe equipe"
+    "rodape rodape rodape";
+}
+
+.cabecalho {
+  grid-area: header;
+}
+
+.apresentacao {
+  grid-area: apresentacao;
+}
+
+.servico {
+  grid-area: servico;
+}
+
+.equipe {
+  grid-area: equipe;
+}
+
+.rodape {
+  grid-area: rodape;
+}
