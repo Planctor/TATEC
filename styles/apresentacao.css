@@ -4,7 +4,6 @@
   grid-template-columns: 500px 485px;
   grid-template-areas: "texto img";
   justify-content: center;
-  align-items: center;
 }
 
 .texto {

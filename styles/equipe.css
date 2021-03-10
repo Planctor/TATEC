@@ -1,0 +1,36 @@
+.equipe {
+  color: #3c3b3b;
+  display: grid;
+  position: relative;
+}
+
+.textoEquipe {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+  left: 45%;
+}
+
+.equipe div h2::before {
+  content: "";
+  background-image: url("../img/icones/Polygon\ 6.svg");
+  background-size: 50px 40px;
+  height: 40px;
+  width: 50px;
+  display: inline-block;
+}
+
+.equipe div div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carding {
+  width: 410px;
+  height: 560px;
+  background: linear-gradient(202.02deg, #08343a -46.86%, #001619 94.81%);
+  border-radius: 10px;
+  display: relative;
+}

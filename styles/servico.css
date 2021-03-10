@@ -4,7 +4,6 @@
   grid-template-columns: 720px 485px;
   grid-template-areas: "img texto";
   justify-content: center;
-  align-items: center;
 }
 
 .texto2 {
@@ -16,8 +15,8 @@
 }
 
 .imgCoffe img {
-  width: 724.73px;
-  height: 684.83px;
+  width: 725px;
+  height: 685px;
 }
 
 .texto2 h2 {
