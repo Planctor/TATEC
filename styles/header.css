@@ -1,0 +1,93 @@
+.cabecalho {
+  align-items: center;
+}
+
+.menu {
+  grid-area: logo;
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 1fr minmax(max-content, 500px) 100px;
+  grid-template-areas: "logo nav nada";
+  align-items: center;
+}
+
+.logo {
+  grid-area: logo;
+  margin: 0 0 0 100px;
+  color: #fff;
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  z-index: 200;
+}
+
+.itens {
+  grid-area: nav;
+}
+
+.itens ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.itens ul li {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.444444px;
+  color: #3c3b3b;
+}
+
+.blobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "roxo roxo cor cor ";
+}
+
+.roxo {
+  grid-area: roxo;
+}
+
+#purple {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.verde {
+  grid-area: roxo;
+}
+
+header #green {
+  position: absolute;
+  z-index: 300;
+}
+
+.laranja {
+  grid-area: roxo;
+}
+
+#orange {
+  width: 180px;
+  height: 170px;
+  margin: 0 650px;
+}
+
+.vermelho {
+  grid-area: roxo;
+}
+
+#red {
+  width: 215px;
+  height: 290px;
+  margin: 150px 500px;
+}
+
+#circle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
