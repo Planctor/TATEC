@@ -1,0 +1,48 @@
+/* APRESENTACAO */
+
+main .apresentacao .texto {
+  grid-column: 2/3;
+}
+
+main .apresentacao .texto h2 {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 57px;
+  color: #3c3b3b;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+main .apresentacao .texto h2::before {
+  content: url("../img/FORMAS/Triangulo.svg");
+  display: inline-block;
+}
+
+main .apresentacao .texto p {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.444444px;
+  color: #3c3b3b;
+  margin: 0 0 0 10px;
+}
+
+main .apresentacao .texto p + p {
+  margin-top: 1em;
+}
+
+main .apresentacao .svg {
+  grid-column: 3/4;
+  display: flex;
+  justify-content: center;
+}
+
+main .apresentacao .svg img {
+  max-width: 550px;
+  max-height: 600px;
+}
