@@ -1,7 +1,6 @@
-@import "./styles/index.css";
-@import "./styles/header.css";
-@import "./styles/grid.css";
-@import "./styles/apresentacao.css";
-@import "./styles/servico.css";
-@import "./styles/equipe.css";
-@import "./styles/footer.css";
+@import "style/index.css";
+@import "style/header.css";
+@import "style/apresentacao.css";
+@import "style/servicos.css";
+@import "style/equipe.css";
+@import "style/footer.css";
