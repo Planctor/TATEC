@@ -1,0 +1,91 @@
+header {
+  height: 710px;
+  position: relative;
+  background: linear-gradient(143.49deg, #0c8a9b 23.88%, #66ccbf 98.79%);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 140px auto 140px;
+  grid-template-rows: minmax(60px, 100px) 500px;
+  grid-template-areas:
+    "menu menu menu "
+    "conteudo conteudo conteudo ";
+}
+
+header nav {
+  grid-area: menu;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .logo #logo {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  color: #ffffff;
+}
+
+header nav .menu ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav .menu ul li {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+header nav .menu ul li + li {
+  margin-left: 80px;
+}
+
+header .conteudo {
+  grid-area: conteudo;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .conteudo .conteudo-1 {
+  margin: 0 0 50px;
+}
+
+header .conteudo .conteudo-1 h1 {
+  font-family: Nunito, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 74px;
+  line-height: 101px;
+  letter-spacing: 1px;
+  color: #eda82f;
+}
+
+header .conteudo .conteudo-1 p {
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  color: #eda82f;
+  max-width: 490px;
+}
+
+header .conteudo .conteudo-2 {
+  max-width: 530px;
+  max-height: 340px;
+}
+
+.svg1 {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}

@@ -1,0 +1,35 @@
+footer {
+  height: 600px;
+  background: linear-gradient(134.62deg, #dd1374 14.59%, #ffd17f 110.91%);
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px auto 140px;
+}
+
+footer img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+footer .direitos {
+  width: 100%;
+  height: 30px;
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  background: #fbb97e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .direitos p {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  text-decoration-line: underline;
+  color: #ffffff;
+}
