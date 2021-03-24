@@ -1,28 +1,35 @@
 /* APRESENTACAO */
 
+main {
+  grid-area: main;
+}
+
+main .apresentacao {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  height: 700px;
+}
+
 main .apresentacao .texto {
-  grid-column: 2/3;
+  grid-column: 1;
 }
 
 main .apresentacao .texto h2 {
-  font-family: Nunito, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
+  font-size: 36px;
   line-height: 57px;
   color: #3c3b3b;
-  position: relative;
   display: flex;
   align-items: center;
 }
 
 main .apresentacao .texto h2::before {
   content: url("../img/FORMAS/Triangulo.svg");
-  display: inline-block;
 }
 
 main .apresentacao .texto p {
-  font-family: Nunito, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -32,17 +39,64 @@ main .apresentacao .texto p {
   margin: 0 0 0 10px;
 }
 
-main .apresentacao .texto p + p {
-  margin-top: 1em;
-}
-
 main .apresentacao .svg {
-  grid-column: 3/4;
-  display: flex;
-  justify-content: center;
+  grid-column: 2;
 }
 
 main .apresentacao .svg img {
-  max-width: 550px;
-  max-height: 600px;
+  display: relative;
+  max-width: 450px;
+  max-height: 500px;
+}
+
+/* CELULAR */
+
+@media (max-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main .apresentacao {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr 1fr;
+    height: 800px;
+    justify-items: center;
+    padding: 10px;
+  }
+
+  main .apresentacao .texto {
+    grid-column: 1;
+    grid-template-rows: 1;
+  }
+
+  main .apresentacao .texto h2 {
+    font-size: 24px;
+  }
+
+  main .apresentacao .texto h2::before {
+    content: url("../img/FORMAS/Triangulo.svg");
+  }
+
+  main .apresentacao .svg {
+    grid-column: 1;
+    grid-template-rows: 2;
+  }
+
+  main .apresentacao .svg img {
+    display: relative;
+    max-width: 350px;
+    max-height: 400px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  main .apresentacao .texto {
+    max-width: 300px;
+  }
 }

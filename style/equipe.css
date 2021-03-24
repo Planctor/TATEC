@@ -1,15 +1,20 @@
+main .equipe {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
+}
+
 main .equipe .titulo {
-  grid-column: 2/4;
-  font-family: Nunito, sans-serif;
+  grid-column: 2;
+  grid-row: 1;
   font-style: normal;
   font-weight: normal;
-  font-size: 42px;
+  font-size: 30px;
   line-height: 57px;
   color: #3c3b3b;
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 10px;
 }
 
 main .equipe .titulo::before {
@@ -17,14 +22,17 @@ main .equipe .titulo::before {
 }
 
 main .equipe .cards {
-  grid-column: 2/4;
+  grid-column: 1/4;
+  grid-row: 2;
   display: flex;
+  max-width: 100%;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 main .equipe .cards .card {
-  width: 310px;
-  height: 460px;
+  max-width: 300px;
+  height: 450px;
   background: linear-gradient(147.23deg, #0c8a9b -19.67%, #66ccbf 94.97%);
   border-radius: 10px;
   position: relative;
@@ -32,12 +40,11 @@ main .equipe .cards .card {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  padding: 30px;
+  margin: 25px 10px 25px 10px;
 }
 
 main .equipe .cards .card span {
-  margin: 10px;
-  font-family: Nunito, sans-serif;
+  margin: 40px 0 10px 0;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -45,14 +52,13 @@ main .equipe .cards .card span {
 }
 
 main .equipe .cards .card img {
-  width: 130px;
+  max-width: 130px;
   height: 130px;
   border: 5px solid #3f3d56;
   border-radius: 50%;
 }
 
 main .equipe .cards .card h3 {
-  font-family: Nunito, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -63,7 +69,6 @@ main .equipe .cards .card h3 {
 }
 
 main .equipe .cards .card p {
-  font-family: Nunito, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -82,4 +87,25 @@ main .equipe .cards .card .redes {
   height: 100px;
   bottom: 0;
   border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 1000px) {
+  main .equipe {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr auto;
+  }
+
+  main .equipe .cards {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+  }
+
+  main .equipe .titulo {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+    font-size: 24px;
+    padding: 0;
+  }
 }

@@ -1,31 +1,32 @@
 header {
-  height: 710px;
-  position: relative;
+  grid-area: header;
   background: linear-gradient(143.49deg, #0c8a9b 23.88%, #66ccbf 98.79%);
   width: 100%;
+  height: 610px;
   display: grid;
-  grid-template-columns: 140px auto 140px;
-  grid-template-rows: minmax(60px, 100px) 500px;
-  grid-template-areas:
-    "menu menu menu "
-    "conteudo conteudo conteudo ";
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  position: relative;
 }
 
+/* MENU */
 header nav {
-  grid-area: menu;
-  grid-column: 2/3;
+  grid-column: 2/4;
+  grid-row: 1;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-header nav .logo #logo {
-  font-family: Roboto, sans-serif;
+header nav #logo {
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
   line-height: 56px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 header nav .menu ul {
@@ -33,8 +34,12 @@ header nav .menu ul {
   list-style: none;
 }
 
-header nav .menu ul li {
-  font-family: Nunito, sans-serif;
+header nav .menu ul li + li {
+  margin-left: 40px;
+}
+
+header nav .menu ul li a {
+  text-decoration: none;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -43,24 +48,23 @@ header nav .menu ul li {
   color: #ffffff;
 }
 
-header nav .menu ul li + li {
-  margin-left: 80px;
-}
+/* CONTEUDO */
 
 header .conteudo {
-  grid-area: conteudo;
-  grid-column: 2/3;
-  display: flex;
+  grid-column: 2/4;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 header .conteudo .conteudo-1 {
-  margin: 0 0 50px;
+  grid-column: 1;
+  justify-self: start;
 }
 
-header .conteudo .conteudo-1 h1 {
-  font-family: Nunito, sans-serif;
+header .conteudo .conteudo-1 h2 {
   font-style: normal;
   font-weight: bold;
   font-size: 74px;
@@ -70,7 +74,6 @@ header .conteudo .conteudo-1 h1 {
 }
 
 header .conteudo .conteudo-1 p {
-  font-family: Nunito;
   font-style: italic;
   font-weight: normal;
   font-size: 36px;
@@ -80,12 +83,79 @@ header .conteudo .conteudo-1 p {
 }
 
 header .conteudo .conteudo-2 {
-  max-width: 530px;
-  max-height: 340px;
+  grid-column: 2;
+  justify-self: end;
 }
 
-.svgHEADER {
+header .conteudo .conteudo-2 img {
+  max-width: 400px;
+}
+
+/* SVG */
+
+header .svgHEADER {
   position: absolute;
+  bottom: -5px;
   width: 100%;
-  bottom: 0px;
+}
+
+/* CELULAR */
+
+@media (max-width: 1000px) {
+  header {
+    display: grid;
+    grid-template-columns: 100%;
+    height: 850px;
+  }
+
+  header nav {
+    grid-column: 1;
+    padding: 30px;
+  }
+
+  header .conteudo {
+    padding: 30px;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr auto;
+  }
+
+  header .conteudo .conteudo-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  header .conteudo .conteudo-2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  header .conteudo .conteudo-2 img {
+    max-width: 350px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  header .conteudo .conteudo-1 h2 {
+    font-size: 60px;
+    color: #eda82f;
+  }
+
+  header .conteudo .conteudo-1 p {
+    font-size: 28px;
+  }
+
+  header nav .menu ul li + li {
+    margin-left: 20px;
+  }
+
+  header nav .menu ul li a {
+    font-size: 14px;
+  }
+
+  header .conteudo .conteudo-2 img {
+    max-width: 300px;
+    max-height: 350px;
+  }
 }

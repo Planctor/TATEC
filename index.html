@@ -5,38 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicia</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <span id="logo">TATEC</span>
-            </div>
+            <span id="logo">TATEC</span>
             <div class="menu">
                 <ul>
-                    <li>Contatos</li>
-                    <li>Serviços</li>
-                    <li>Sobre nós</li>
+                    <li><a href="#">Contatos</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Sobre nós</a></li>
                 </ul>
             </div>
         </nav>
         <div class="conteudo">
             <div class="conteudo-1">
-                <h1>TITULO</h1>
+                <h2>TITULO</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div class="svg conteudo-2">
-                <img src="img/SVG_DESENHO/HEADER.svg" alt="desenho">
+            <div class="conteudo-2">
+                <img class="svg" src="img/SVG_DESENHO/Notebook.svg" alt="desenho">
             </div>
         </div>
-        <img class="svgHEADER" src="img/FORMAS/ONDAHEADER.svg">
+        <img class="svgHEADER" src="img/FORMAS/Vector.svg">
     </header>
-
     <main>
-        <section class="apresentacao conteudo">
+        <section class="apresentacao">
             <div class="texto">
                 <h2>Bem vindo à LasanhaTec</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -53,7 +50,7 @@
             </div>
         </section>
 
-        <section class="servicos conteudo">
+        <section class="conteudo">
             <div class="svg">
                 <img src="img/SVG_DESENHO/Servicos.svg" alt="servicos">
             </div>
@@ -68,10 +65,9 @@
                     labore et
                     dolore magna aliqua. Ut enim ad minim</p>
             </div>
-
         </section>
 
-        <section class="equipe conteudo">
+        <section class="equipe">
             <h2 class="titulo">Nossa Equipe</h2>
             <div class="cards">
                 <div class="card">
@@ -108,22 +104,29 @@
     </main>
 
     <footer>
-        <img src="./img/FORMAS/OndaFooter.svg">
-        <div class="texto">
-            <h2>Nossos serviços</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna
-                aliqua. Ut enim ad minim</p>
-            <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim eiusmod tempor
-                incididunt ut
-                labore et
-                dolore magna aliqua. Ut enim ad minim</p>
+        <!-- <img src="./img/FORMAS/OndaFooter.svg"> -->
+        <div class="conteudo">
+            <form>
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+                <label for="mensagem">Mensagem</label>
+                <input type="text" id="mensagem">
+                <input type="submit" value="enviar">
+            </form>
+            <div class="endereco">
+                <h3>Onde estamos</h3>
+                <h3>LasanhaTec</h3>
+                <h3>Rua dos Bobos n°0</h3>
+                <h3>Telefone(whatsapp): 98350-6951</h3>
+            </div>
         </div>
         <div class="direitos">
             <p>Todos os direitos reservados á Lasanha’s LTDA</p>
         </div>
     </footer>
+
 </body>
 
 </html>
