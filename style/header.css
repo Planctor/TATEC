@@ -1,12 +1,23 @@
 header {
   grid-area: header;
-  background: linear-gradient(143.49deg, #0c8a9b 23.88%, #66ccbf 98.79%);
-  width: 100%;
+  background: linear-gradient(-45deg, #ffd17f, #dd1374, #0c8a9b, #66ccbf);
+  background-size: 350% 350%;
   height: 610px;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: 1fr 5fr;
   position: relative;
+  animation: gradiente 10s ease infinite;
+}
+
+@keyframes gradiente {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* MENU */
@@ -46,6 +57,11 @@ header nav .menu ul li a {
   line-height: 28px;
   letter-spacing: 0.5px;
   color: #ffffff;
+  transition: 0.5s;
+}
+
+header nav .menu ul li a:hover {
+  color: #f7d425;
 }
 
 /* CONTEUDO */
