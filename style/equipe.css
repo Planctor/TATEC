@@ -40,9 +40,7 @@ main .equipe .cards .card {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  box-shadow: -12px 10px 0px 0px rgba(0, 0, 0, 0.14);
-  -webkit-box-shadow: -12px 10px 0px 0px rgba(0, 0, 0, 0.14);
-  -moz-box-shadow: -12px 10px 0px 0px rgba(0, 0, 0, 0.14);
+  margin: 25px 10px 25px 10px;
 }
 
 main .equipe .cards .card span {
@@ -89,18 +87,23 @@ main .equipe .cards .card .redes {
   height: 100px;
   bottom: 0;
   border-radius: 0 0 10px 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 
-main .equipe .cards .card .redes a {
-  color: #f8f8f8;
-  font-size: 40px;
+.sociais a{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 42px;
+  text-align: start;
+  color: #ffffff;
+  display: contents;
 }
 
-main .equipe .cards .card .redes a:hover {
-  color: #3c3b3b;
+.sociais a:hover{
+ color: red;
+}
+.sociais a i{
+  margin: 6% 3% 0% 7%;
 }
 
 @media (max-width: 1000px) {

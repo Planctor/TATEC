@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Tatec</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link href='node_modules/get-google-fonts/main.js' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
         <nav>
-            <h1 id="logo">TATEC</h1>
+            <a href="index.html"><img src="img/LOGO/logo2.png"></a>
             <div class="menu">
                 <ul>
-                    <li><a href="#">Contatos</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#quemsomos">Sobre nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#equipe">Nossa Equipe</a></li>
+                    <li><a href="#contato">Contatos</a></li> 
                 </ul>
             </div>
         </nav>
@@ -35,9 +35,9 @@
         <img class="svgHEADER" src="img/FORMAS/Vector.svg">
     </header>
     <main>
-        <section class="apresentacao">
+        <section class="apresentacao" id="quemsomos">
             <div class="texto">
-                <h2>Bem vindo à LasanhaTec</h2>
+                <h2>Bem vindo a TATEC</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna
@@ -52,7 +52,7 @@
             </div>
         </section>
 
-        <section class="conteudo">
+        <section class="conteudo" id="servicos">
             <div class="svg">
                 <img src="img/SVG_DESENHO/Servicos.svg" alt="servicos">
             </div>
@@ -69,50 +69,46 @@
             </div>
         </section>
 
-        <section class="equipe">
+        <section class="equipe" id="equipe">
             <h2 class="titulo">Nossa Equipe</h2>
             <div class="cards">
                 <div class="card">
-                    <span>DEV BACK-END</span>
-                    <img src="/img/EQUIPE/male.svg" alt="foto">
-                    <h3>LASANHA</h3>
+                    <span>DEV FULL-STACK</span>
+                    <img src="img/EQUIPE/male.svg" alt="foto">
+                    <h3>Marcos </h3>
                     <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
                     <div class="redes">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-git-square"></i></a>
-                        <a href="#"><i class="fas fa-envelope-square"></i></a>
+                        <div class="sociais">
+                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank"><i class="fas fa-mobile-alt"></i></a>
+                            <a href="mailto:marcospauloctavares@gmail.com" target="_blank"><i class="fab fa-mailchimp"></i></a></h4>
+                            <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/marcoscarneiro2" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <span>DEV FRONT-END</span>
-                    <img src="/img/EQUIPE/male.svg" alt="foto">
+                    <img src="img/EQUIPE/male.svg" alt="foto">
                     <h3>LILI</h3>
                     <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
                     <div class="redes">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-git-square"></i></a>
-                        <a href="#"><i class="fas fa-envelope-square"></i></a>
+
                     </div>
                 </div>
                 <div class="card">
                     <span>WEB-DESIGN</span>
-                    <img src="/img/EQUIPE/male.svg" alt="foto">
+                    <img src="img/EQUIPE/male.svg" alt="foto">
                     <h3>DRAGÃO</h3>
                     <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
                     <div class="redes">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-git-square"></i></a>
-                        <a href="#"><i class="fas fa-envelope-square"></i></a>
+
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="contato">
         <img src="./img/FORMAS/OndaFooter.svg">
         <div class="conteudo">
             <h2>Contatos</h2>
@@ -129,13 +125,12 @@
             </div>
         </div>
         <div class="endereco">
-            <h4>Onde estamos</h4>
-            <h4>LasanhaTec</h4>
-            <h4>Rua dos Bobos n°0</h4>
-            <h4>Telefone(whatsapp): 98350-6951</h4>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank"><i class="fas fa-mobile-alt"></i></a>
+            <a href="mailto:marcospauloctavares@gmail.com"><i class="fab fa-mailchimp" target="_blank"></i></a></h4>
+            <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
         <div class="direitos">
-            <p>Todos os direitos reservados á Lasanha’s LTDA</p>
+            <p>Todos os direitos reservados á Tatec LTDA</p>
         </div>
     </footer>
 

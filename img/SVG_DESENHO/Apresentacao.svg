@@ -1,5 +1,7 @@
-<svg width="697" height="659" viewBox="0 0 697 659" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="700" height="666" viewBox="0 0 700 666" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M99.1673 258.136C102.626 197.963 89.5448 125.363 135.306 85.1535C180.872 45.1144 258.039 46.3862 318.008 65.8408C371.908 83.3266 384.671 155.371 434.455 182.201C479.381 206.413 542.691 176.582 582.336 208.295C623.613 241.314 644.516 297.339 641.646 347.941C638.814 397.863 599.156 435.855 567.23 474.606C537.707 510.441 507.924 547.969 463.263 564.456C419.264 580.698 370.555 571.811 323.302 564.653C275.241 557.372 224.258 552.799 186.583 522.545C148.365 491.855 132.218 444.451 117.253 399.189C101.938 352.863 96.4066 306.161 99.1673 258.136Z" fill="#0C8A9B"/>
+</g>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="13" y="0" width="684" height="659">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M111.108 436.371C78.1825 368.633 88.1216 288.395 123.634 221.977C158.599 156.583 222.033 116.387 293.25 95.7194C375.522 71.8432 476.034 42.1571 537.446 101.885C597.501 160.293 554.97 257.453 545.077 340.641C536.876 409.593 540.608 486.206 486.555 529.795C430.876 574.694 353.155 568.65 283.745 551.378C213.15 533.812 142.91 501.799 111.108 436.371Z" fill="#EBF9F9"/>
 </mask>
@@ -47,6 +49,15 @@
 </g>
 </g>
 <defs>
+<filter id="filter0_d" x="0" y="11.6156" width="715.132" height="654.016" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dx="15" dy="15"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.235294 0 0 0 0 0.231373 0 0 0 0 0.231373 0 0 0 0.3 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
 <clipPath id="clip0">
 <rect width="650" height="469" fill="white" transform="translate(30 58)"/>
 </clipPath>

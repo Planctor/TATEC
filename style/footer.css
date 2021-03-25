@@ -9,7 +9,6 @@ footer {
 }
 
 footer img {
-  grid-column: 1/5;
   width: 100%;
   position: absolute;
   top: -1px;
@@ -81,6 +80,7 @@ footer .conteudo .botao input[type="submit"]:hover {
 
 footer .conteudo h2::before {
   content: url(../img/FORMAS/Quadrado.svg);
+  margin-right: 2%;
 }
 
 footer .endereco {
@@ -90,13 +90,21 @@ footer .endereco {
   justify-self: center;
 }
 
-footer .endereco h4 {
+.endereco a{
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
+  font-size: 50px;
   line-height: 42px;
   text-align: start;
   color: #ffffff;
+  display: contents;
+}
+
+.endereco a:hover{
+ color: red;
+}
+.endereco a i{
+  margin: 20px;
 }
 
 footer .direitos {
