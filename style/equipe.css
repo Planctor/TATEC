@@ -9,16 +9,17 @@ main .equipe .titulo {
   grid-row: 1;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 42px;
   line-height: 57px;
   color: #3c3b3b;
   display: flex;
   align-items: center;
-  padding: 10px;
+  margin-left: 50px;
 }
 
 main .equipe .titulo::before {
   content: url(../img/FORMAS/Estrela.svg);
+  margin-right: 10px;
 }
 
 main .equipe .cards {

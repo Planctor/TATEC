@@ -47,7 +47,7 @@ header nav .menu ul {
 }
 
 header nav .menu ul li + li {
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 header nav .menu ul li a {

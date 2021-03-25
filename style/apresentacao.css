@@ -18,7 +18,7 @@ main .apresentacao .texto {
 main .apresentacao .texto h2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 42px;
   line-height: 57px;
   color: #3c3b3b;
   display: flex;
@@ -36,7 +36,8 @@ main .apresentacao .texto p {
   line-height: 28px;
   letter-spacing: 0.444444px;
   color: #3c3b3b;
-  margin: 0 0 0 10px;
+  margin: 15px 0 40px 65px;
+  max-width: 640px;
 }
 
 main .apresentacao .svg {

@@ -24,11 +24,11 @@ footer .conteudo {
 footer .conteudo h2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 42px;
   line-height: 57px;
   color: #ffffff;
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 footer .conteudo form label {
