@@ -9,6 +9,7 @@ footer {
 }
 
 footer img {
+  grid-column: 1/5;
   width: 100%;
   position: absolute;
   top: -1px;

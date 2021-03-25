@@ -6,7 +6,8 @@
 
 body {
   margin: 0 auto;
-  font-family: Roboto, sans-serif;
+  font-family: "Nunito";
+  color: #3c3b3b;
   background: #f8f8f8;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
