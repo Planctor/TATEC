@@ -43,6 +43,7 @@ main .equipe .cards .card {
   box-shadow: -12px 10px 0px 0px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: -12px 10px 0px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: -12px 10px 0px 0px rgba(0, 0, 0, 0.14);
+  margin: 25px 0;
 }
 
 main .equipe .cards .card span {
@@ -100,7 +101,7 @@ main .equipe .cards .card .redes a {
 }
 
 main .equipe .cards .card .redes a:hover {
-  color: #3c3b3b;
+  color: #66ccbf;
 }
 
 @media (max-width: 1000px) {
