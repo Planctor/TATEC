@@ -8,7 +8,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
     <link href="node_modules/@fortawesome/fontawesome-free/css/all.css" rel='stylesheet'>
-    <link href='node_modules/get-google-fonts/main.js' rel='stylesheet'>
+    <link href='node_modules/get-google-fonts/main.js' type='text/css'>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <nav>
             <img src="img/LOGO/logo.png" alt="logo">
             <div class="menu">
-                <ul>
+                <ul data-menu='links'>
                     <li><a href="#quemsomos">Sobre nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#equipe">Nossa Equipe</a></li>
@@ -36,7 +36,7 @@
         <img class="svgHEADER" src="img/FORMAS/Vector.svg">
     </header>
     <main>
-        <section class="apresentacao" id="quemsomos">
+        <section class="apresentacao" id="quemsomos" data-menu='conteudo'>
             <div class="texto">
                 <h2>Bem vindo a TATEC</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -53,7 +53,7 @@
             </div>
         </section>
 
-        <section class="conteudo" id="servicos">
+        <section class="conteudo" id="servicos" data-menu='conteudo'>
             <div class="svg">
                 <img src="img/SVG_DESENHO/Servicos.svg" alt="servicos">
             </div>
@@ -70,7 +70,7 @@
             </div>
         </section>
 
-        <section class="equipe" id="equipe">
+        <section class="equipe" id="equipe" data-menu='conteudo'>
             <h2 class="titulo">Nossa Equipe</h2>
             <div class="cards">
                 <div class="card">
@@ -146,7 +146,7 @@
         </section>
     </main>
 
-    <footer id="contato">
+    <footer id="contato" data-menu='conteudo'>
         <img src="./img/FORMAS/OndaFooter.svg">
         <div class="conteudo">
             <h2>Contatos</h2>
@@ -172,7 +172,7 @@
             <p>Todos os direitos reservados á Lasanha’s LTDA</p>
         </div>
     </footer>
-
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
