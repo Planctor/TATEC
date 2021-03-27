@@ -2,6 +2,12 @@ main .equipe {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 5fr;
+  opacity: 0;
+  transition: 1s;
+}
+
+main .ativo {
+  opacity: 1;
 }
 
 main .equipe .titulo {

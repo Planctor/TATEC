@@ -74,6 +74,20 @@ header .conteudo {
 header .conteudo .conteudo-1 {
   grid-column: 1;
   justify-self: start;
+  position: relative;
+  transition: 2.5s;
+  animation: aparecerLeft 2s forwards;
+}
+
+@keyframes aparecerLeft {
+  from {
+    opacity: 0;
+    left: -200px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
 }
 
 header .conteudo .conteudo-1 h2 {
@@ -97,6 +111,20 @@ header .conteudo .conteudo-1 p {
 header .conteudo .conteudo-2 {
   grid-column: 2;
   justify-self: end;
+  position: relative;
+  transition: 2.5s;
+  animation: aparecerRight 2s forwards;
+}
+
+@keyframes aparecerRight {
+  from {
+    opacity: 0;
+    right: -200px;
+  }
+  to {
+    opacity: 1;
+    right: 0px;
+  }
 }
 
 header .conteudo .conteudo-2 img {

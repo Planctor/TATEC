@@ -3,6 +3,12 @@ main .conteudo {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   height: 700px;
+  opacity: 0;
+  transition: 1s;
+}
+
+main .ativo {
+  opacity: 1;
 }
 
 main .conteudo .texto {
