@@ -1,0 +1,102 @@
+/* HEADER */
+
+header {
+  background: linear-gradient(-45deg, #ffd17f, #dd1374, #0c8a9b, #66ccbf);
+  background-size: 350% 350%;
+  position: relative;
+  animation: gradiente 10s ease infinite;
+}
+
+@keyframes gradiente {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* HEADER Conteudo*/
+
+header .conteudo .conteudo-1 {
+  transition: 2.5s;
+  animation: aparecerLeft 2s forwards;
+  position: relative;
+}
+
+@keyframes aparecerLeft {
+  from {
+    opacity: 0;
+    left: -200px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+header .conteudo .conteudo-2 {
+  position: relative;
+  transition: 2.5s;
+  animation: aparecerRight 2s forwards;
+}
+
+@keyframes aparecerRight {
+  from {
+    opacity: 0;
+    right: -200px;
+  }
+  to {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+/* SECTIONS */
+
+main .apresentacao .animacaoEsquerda {
+  position: relative;
+  transition: 1s;
+  animation: animacaoE 2s forwards ease-out;
+}
+
+main .ativo .animacaoEsquerda {
+  position: relative;
+  transition: 1s;
+  animation: animacaoE 2s forwards ease-out;
+}
+
+@keyframes animacaoE {
+  from {
+    opacity: 0;
+    left: -200px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+main .apresentacao .svg.animacaoDireita {
+  position: relative;
+  transition: 1s;
+  animation: animacaoD 2s forwards ease-out;
+}
+
+main .ativo .animacaoDireita {
+  position: relative;
+  transition: 1s;
+  animation: animacaoD 2s forwards ease-out;
+}
+
+@keyframes animacaoD {
+  from {
+    opacity: 0;
+    right: -200px;
+  }
+  to {
+    opacity: 1;
+    right: 0px;
+  }
+}
