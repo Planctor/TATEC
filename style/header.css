@@ -18,7 +18,10 @@ header nav {
 }
 
 header nav img {
-  width: 200px;
+  max-width: 200px;
+}
+
+header nav .menu-mobile {
   cursor: pointer;
 }
 
@@ -159,7 +162,6 @@ header .svgHEADER {
   header nav .menu-mobile div {
     grid-column: 1;
     display: block;
-    cursor: pointer;
   }
 
   header nav .menu {
