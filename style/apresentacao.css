@@ -9,6 +9,12 @@ main .apresentacao {
   grid-template-columns: 2fr 1fr;
   align-items: center;
   height: 700px;
+  opacity: 0;
+  transition: 1s;
+}
+
+main .ativo {
+  opacity: 1;
 }
 
 main .apresentacao .texto {

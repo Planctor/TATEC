@@ -1,23 +1,9 @@
 header {
   grid-area: header;
-  background: linear-gradient(-45deg, #ffd17f, #dd1374, #0c8a9b, #66ccbf);
-  background-size: 350% 350%;
   height: 610px;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: 1fr 5fr;
-  position: relative;
-  animation: gradiente 10s ease infinite;
-}
-
-@keyframes gradiente {
-  0%,
-  100% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
 }
 
 /* MENU */
@@ -31,11 +17,32 @@ header nav {
   flex-wrap: wrap;
 }
 
-header nav img{
-  width: 230px;
-  margin-top: 2%;
-  line-height: 56px;
+header nav img {
+  max-width: 200px;
+}
+
+header nav .menu-mobile {
   cursor: pointer;
+}
+
+header nav .menu-mobile div {
+  width: 40px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #f8f8f8;
+  display: none;
+  position: relative;
+  transition: 0.5s;
+}
+
+header nav .menu-mobile div::after,
+header nav .menu-mobile div::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #f8f8f8;
 }
 
 header nav .menu ul {
@@ -119,12 +126,68 @@ header .svgHEADER {
   header {
     display: grid;
     grid-template-columns: 100%;
-    height: 850px;
+    height: 950px;
+  }
+
+  header nav img {
+    width: 150px;
   }
 
   header nav {
     grid-column: 1;
     padding: 30px;
+  }
+
+  header .conteudo .conteudo-1 {
+    padding: 2em;
+  }
+
+  header .conteudo .conteudo-1 h2 {
+    font-size: 50px;
+    color: #eda82f;
+  }
+
+  header .conteudo .conteudo-1 p {
+    font-size: 24px;
+    color: #eda82f;
+  }
+
+  header nav .menu-mobile {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  header nav .menu-mobile div {
+    grid-column: 1;
+    display: block;
+  }
+
+  header nav .menu {
+    position: relative;
+  }
+
+  header nav .menu ul {
+    position: absolute;
+    display: none;
+    right: 0px;
+    text-align: end;
+    flex-direction: column;
+    min-width: 150px;
+    margin: 1em 0;
+  }
+
+  header nav .menu ul.ativo {
+    display: flex;
+  }
+
+  header nav .menu ul li {
+    padding: 10px 0;
+  }
+
+  header nav .menu ul li + li {
+    margin-left: 0;
   }
 
   header .conteudo {

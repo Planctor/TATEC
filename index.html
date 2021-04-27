@@ -5,28 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatec</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- <link href="node_modules/@fortawesome/fontawesome-free/css/all.css" rel='stylesheet'> -->
+    <link href='node_modules/get-google-fonts/main.js' type='text/css'>
+
+    <!-- cdn apenas para mostrar o git, deve ser removido qnd hospedado -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel='stylesheet'>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html"><img src="img/LOGO/logo2.png"></a>
+            <img src="img/LOGO/logo.png" alt="logo">
             <div class="menu">
-                <ul>
+                <div class="menu-mobile">
+                    <div></div>
+                </div>
+                <ul data-menu='links'>
                     <li><a href="#quemsomos">Sobre nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#equipe">Nossa Equipe</a></li>
-                    <li><a href="#contato">Contatos</a></li> 
+                    <li><a href="#contato">Contatos</a></li>
                 </ul>
             </div>
         </nav>
         <div class="conteudo">
             <div class="conteudo-1">
-                <h2>TITULO</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <!--<h2>Tatec</h2>-->
+                <p>Soluções em <b>Informática</b> para você e sua empresa.</p>
             </div>
             <div class="conteudo-2">
                 <img class="svg" src="img/SVG_DESENHO/Notebook.svg" alt="desenho">
@@ -35,80 +42,128 @@
         <img class="svgHEADER" src="img/FORMAS/Vector.svg">
     </header>
     <main>
-        <section class="apresentacao" id="quemsomos">
+        <section class="apresentacao" id="quemsomos" data-menu='conteudo' data-anima>
             <div class="texto">
                 <h2>Bem vindo a TATEC</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna
-                    aliqua. Ut enim ad minim</p>
-                <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna aliqua. Ut enim ad minim</p>
+                <p>A Empresa Tatec Informática foi criada em 2016 para sanar a necessidade
+                   dos clientes interessados em adquirir hardware e software. </p>
+                <p>O empreendimento busca estabelecer serviços de alta qualidade de manutenção
+                   para satisfazer o consumidor com grande diferencial na prestação de serviços
+                   e vendas de produtos, comprometidos com a satisfação dos nossos clientes,
+                   inovando com qualidade e competência na área da tecnologia. Sendo reconhecido
+                   por sua excelência prestação de serviços, levando-os a se
+                   interessarem por novas tecnologias.</p>
             </div>
             <div class="svg">
                 <img src="img/SVG_DESENHO/Apresentacao.svg" alt="Apresentaçao">
             </div>
         </section>
 
-        <section class="conteudo" id="servicos">
+        <section class="conteudo" id="servicos" data-menu='conteudo' data-anima>
             <div class="svg">
                 <img src="img/SVG_DESENHO/Servicos.svg" alt="servicos">
             </div>
             <div class="texto">
                 <h2>Nossos serviços</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna
-                    aliqua. Ut enim ad minim</p>
-                <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim eiusmod tempor
-                    incididunt ut
-                    labore et
-                    dolore magna aliqua. Ut enim ad minim</p>
+                <p>
+                    Oferecemos serviços de manutenção e reparos em computadores, notebooks e redes. 
+                </p>
+                <p>Trabalhos também com desenvolvimento de websites, 
+                    sistema de controle de usuário e produtos <b>(ideal para novas empresas e microempreendedores)</b>,
+                    criação de logos e artes <b>(para empresas e redes sociais)</b> e edição de vídeos
+                    <b>(Particular e para plataformas de vídeos)</b>.</p>
             </div>
         </section>
 
-        <section class="equipe" id="equipe">
+        <section class="equipe" id="equipe" data-menu='conteudo'>
             <h2 class="titulo">Nossa Equipe</h2>
             <div class="cards">
                 <div class="card">
                     <span>DEV FULL-STACK</span>
-                    <img src="img/EQUIPE/male.svg" alt="foto">
-                    <h3>Marcos </h3>
-                    <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                    <img src="/img/EQUIPE/male.svg" alt="foto">
+                    <h3>Marcos Paulo</h3>
+                    <p>Graduado em Informática, com ampla experiência em montagem e manutenção de computadores,
+                       notebooks, redes, criação de logos e artes utilizando Photoshop e Corel Draw
+                       e edições de vídeos,
+                        <br>
+                       possui conhecimentos em programação, com grande ênfase em front-end utilizando-se
+                          da linguagem e frameworks do mercado, como Java script, JQuery ,Bootstrap e Vuejs.
+                          Com conhecimentos do back-end nas linguagens Php, Java, C, C++, Sql, MySql e Firebase.
+                    </p>
+                    <span>Clique para ver perfil</span>
+                    
                     <div class="redes">
-                        <div class="sociais">
-                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank"><i class="fas fa-mobile-alt"></i></a>
-                            <a href="mailto:marcospauloctavares@gmail.com" target="_blank"><i class="fab fa-mailchimp"></i></a></h4>
-                            <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/marcoscarneiro2" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
+                            <a href="https://www.facebook.com/marcospaulo.carneirotavares/" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                       
+                            <a href="https://github.com/marcoscarneiro2" target="_blank">
+                            <i class="fab fa-git-square"></i>
+                        </a>
+
+                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank">
+                            <i class="fab fa-whatsapp-square"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="card">
                     <span>DEV FRONT-END</span>
-                    <img src="img/EQUIPE/male.svg" alt="foto">
-                    <h3>LILI</h3>
+                    <img src="/img/EQUIPE/male.svg" alt="foto">
+                    <h3>Lucas F.</h3>
                     <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                    <span>Clique para ver perfil</span>
                     <div class="redes">
+                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
 
+                        <a href="mailto:marcospauloctavares@gmail.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank">
+                            <i class="fab fa-git-square"></i>
+                        </a>
+
+                        <a href="https://github.com/marcoscarneiro2" target="_blank">
+                            <i class="fab fa-whatsapp-square"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="card">
                     <span>WEB-DESIGN</span>
-                    <img src="img/EQUIPE/male.svg" alt="foto">
-                    <h3>DRAGÃO</h3>
+                    <img src="/img/EQUIPE/male.svg" alt="foto">
+                    <h3>Lucas M.</h3>
                     <p>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                    <span>Clique para ver perfil</span>
                     <div class="redes">
+                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
 
+                        <a href="mailto:marcospauloctavares@gmail.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank">
+                            <i class="fab fa-git-square"></i>
+                        </a>
+
+                        <a href="https://github.com/marcoscarneiro2" target="_blank">
+                            <i class="fab fa-whatsapp-square"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="contato">
+    <footer id="contato" data-menu='conteudo'>
         <img src="./img/FORMAS/OndaFooter.svg">
         <div class="conteudo">
             <h2>Contatos</h2>
@@ -125,15 +180,29 @@
             </div>
         </div>
         <div class="endereco">
-            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank"><i class="fas fa-mobile-alt"></i></a>
-            <a href="mailto:marcospauloctavares@gmail.com"><i class="fab fa-mailchimp" target="_blank"></i></a></h4>
-            <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <h4>Onde estamos</h4>
+            <h4>LasanhaTec</h4>
+            <h4>Rua dos Bobos n°0</h4>
+            <h4>Telefone(whatsapp): 98350-6951</h4>
         </div>
         <div class="direitos">
-            <p>Todos os direitos reservados á Tatec LTDA</p>
+            <p>Todos os direitos reservados á Lasanha’s LTDA</p>
         </div>
     </footer>
-
+    <script type="module" src="script.js"></script>
 </body>
+<script>
+var span = document.querySelectorAll(".card");    
+span.forEach((item) => {
+  item.addEventListener("click", function () {
+    const phr = this.querySelector("p");
+    if (phr.classList.contains("mostrar")) {
+      phr.classList.remove("mostrar");
+    } else {
+      phr.classList.add("mostrar");
+    }
+  });
+});
+</script>
 
 </html>
