@@ -38,7 +38,7 @@ main .equipe .cards {
 
 main .equipe .cards .card {
   max-width: 300px;
-  height: 450px;
+  height: auto;
   background: linear-gradient(147.23deg, #0c8a9b -19.67%, #66ccbf 94.97%);
   border-radius: 10px;
   position: relative;
@@ -47,6 +47,13 @@ main .equipe .cards .card {
   align-items: center;
   flex-direction: column;
   margin: 25px 10px;
+}
+
+.card p {
+  display: none;
+}
+.card p.mostrar {
+  display: block;
 }
 
 main .equipe .cards .card:hover {
@@ -88,8 +95,9 @@ main .equipe .cards .card p {
   letter-spacing: 0.444444px;
   color: #f8f8f8;
   max-width: 80%;
-  text-align: center;
+  text-align: justify;
   line-height: 150%;
+  height: 350px;
 }
 
 main .equipe .cards .card .redes {
