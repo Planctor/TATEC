@@ -11,6 +11,8 @@
         "sourceType": "module"
     },
     "rules": {
-        "no-import-assign": false
+        "import/extensions": 0,
+        "indent": 0,
+        "no-tabs":0
     }
 }
