@@ -1,12 +1,12 @@
 export default function drop() {
-	const card = document.querySelectorAll('.card');
+	const span = document.querySelectorAll('.card');
 
-	if (!card) {
-		card.forEach((item) => {
-			item.addEventListener('click', () => {
-				const phr = this.querySelector('p');
-				phr.classList.toggle('mostrar');
-			});
-		});
+	function dropDown() {
+		const phr = this.querySelector('p');
+		phr.classList.toggle('mostrar');
 	}
+
+	span.forEach((item) => {
+		item.addEventListener('click', dropDown);
+	});
 }
