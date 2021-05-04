@@ -4,6 +4,7 @@ main .equipe {
   grid-template-rows: 1fr 5fr;
   opacity: 0;
   transition: 1s;
+  padding: 0 0 100px;
 }
 
 main .ativo {
@@ -32,13 +33,13 @@ main .equipe .cards {
   grid-row: 2;
   display: flex;
   max-width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-main .equipe .cards .card{
-  max-width: 300px;
-  height: auto;
+main .equipe .cards .card {
+  width: 300px;
+  height: 550px;
   background: linear-gradient(147.23deg, #0c8a9b -19.67%, #66ccbf 94.97%);
   border-radius: 10px;
   position: relative;
@@ -46,14 +47,8 @@ main .equipe .cards .card{
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  margin: 25px 10px;
-}
-
-.card p{
-  display: none;
-}
-.card p.mostrar {
-  display: block;
+  padding: 25px 10px;
+  cursor: pointer;
 }
 
 main .equipe .cards .card:hover {
@@ -88,6 +83,7 @@ main .equipe .cards .card h3 {
 }
 
 main .equipe .cards .card p {
+  display: none;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -95,9 +91,14 @@ main .equipe .cards .card p {
   letter-spacing: 0.444444px;
   color: #f8f8f8;
   max-width: 80%;
-  text-align: justify;
+  text-align: center;
   line-height: 150%;
   height: 350px;
+  overflow-y: auto;
+}
+
+main .equipe .cards .card p.mostrar {
+  display: block;
 }
 
 main .equipe .cards .card .redes {
@@ -132,6 +133,11 @@ main .equipe .cards .card .redes a:hover {
     grid-column: 1;
     grid-row: 2;
     justify-content: center;
+    
+  }
+
+  main .equipe .cards .card{
+    margin-bottom: 10%;
   }
 
   main .equipe .titulo {

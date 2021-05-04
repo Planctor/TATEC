@@ -122,6 +122,19 @@ footer .conteudo form {
   flex-direction: column;
 }
 
+footer .endereco a{
+  text-decoration: none;
+  color:white;
+  font-size: 6mm;
+  padding: 1px;
+}
+footer .endereco i{
+  text-decoration: none;
+  background: linear-gradient(rgb(190, 3, 3), rgb(255, 196, 1),rgb(190, 3, 3));
+  color: rgb(190, 3, 3);
+  font-size: 10mm;
+}
+
 @media (max-width: 1000px) {
   footer {
     grid-column: 1/3;
