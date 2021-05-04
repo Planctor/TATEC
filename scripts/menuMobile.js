@@ -8,4 +8,6 @@ export default function mobile() {
             links.classList.toggle('ativo');
         });
     }
+
+    
 }

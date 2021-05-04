@@ -4,6 +4,7 @@ main {
   grid-area: main;
 }
 
+
 main .apresentacao {
   display: grid;
   grid-template-columns: 2fr 1fr;
