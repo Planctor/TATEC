@@ -133,6 +133,11 @@ main .equipe .cards .card .redes a:hover {
     grid-column: 1;
     grid-row: 2;
     justify-content: center;
+    
+  }
+
+  main .equipe .cards .card{
+    margin-bottom: 10%;
   }
 
   main .equipe .titulo {
