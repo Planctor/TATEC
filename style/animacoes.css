@@ -127,3 +127,18 @@ header nav .menu-mobile div::before {
   transform: rotate(0);
   transform: translateY(-13px);
 }
+
+/* MENU DE VOLTA PARA O TOPO */
+
+@keyframes subindo {
+  from {
+    margin-bottom: 10px;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+#botao .voltarTopo {
+  animation: subindo 0.8s alternate infinite ease-in;
+}
