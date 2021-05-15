@@ -27,12 +27,12 @@ header nav .menu-mobile {
 
 header nav .menu-mobile div {
   width: 40px;
-  height: 5px;
+  height: 6px;
   border-radius: 50px;
   background-color: #f8f8f8;
   display: none;
   position: relative;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 header nav .menu-mobile div::after,
@@ -40,7 +40,7 @@ header nav .menu-mobile div::before {
   content: "";
   position: absolute;
   width: 40px;
-  height: 5px;
+  height: 6px;
   border-radius: 50px;
   background-color: #f8f8f8;
 }
@@ -135,28 +135,14 @@ header .svgHEADER {
 
   header nav {
     grid-column: 1;
-    padding: 30px;
-  }
-
-  header .conteudo .conteudo-1 {
-    padding: 2em;
-  }
-
-  header .conteudo .conteudo-1 h2 {
-    font-size: 50px;
-    color: #eda82f;
-  }
-
-  header .conteudo .conteudo-1 p {
-    font-size: 24px;
-    color: #eda82f;
+    padding: 50px;
   }
 
   header nav .menu-mobile {
     width: 40px;
-    height: 40px;
+    height: 30px;
     display: flex;
-    align-items: center;  
+    align-items: center;
   }
 
   header nav .menu-mobile div {
@@ -188,6 +174,20 @@ header .svgHEADER {
 
   header nav .menu ul li + li {
     margin-left: 0;
+  }
+
+  header .conteudo .conteudo-1 {
+    padding: 2em;
+  }
+
+  header .conteudo .conteudo-1 h2 {
+    font-size: 50px;
+    color: #eda82f;
+  }
+
+  header .conteudo .conteudo-1 p {
+    font-size: 24px;
+    color: #eda82f;
   }
 
   header .conteudo {

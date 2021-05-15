@@ -1,13 +1,9 @@
-@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
-
 #botao .voltarTopo {
   background-color: #66ccbe77;
   border-radius: 10em;
-  box-shadow: -2px 3px 0px 0px rgba(12, 138, 155, 0.2);
-  -webkit-box-shadow: -2px 3px 0px 0px rgba(12, 138, 155, 0.2);
-  -moz-box-shadow: -2px 3px 0px 0px rgba(12, 138, 155, 0.2);
   color: #0c8a9b;
   cursor: pointer;
+  display: none;
   position: fixed;
   bottom: 15px;
   right: 25px;
@@ -16,7 +12,7 @@
 
 #botao .voltarTopo:hover {
   background-color: #66ccbf;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 #botao .voltarTopo::after {

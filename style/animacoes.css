@@ -107,23 +107,23 @@ header nav .menu-mobile .ativo {
 }
 
 header nav .menu-mobile div.ativo::after {
-  transition: 0.5s;
+  transition: 0.2s;
   transform: rotate(45deg);
 }
 
 header nav .menu-mobile div.ativo::before {
-  transition: 0.5s;
+  transition: 0.2s;
   transform: rotate(-45deg);
 }
 
 header nav .menu-mobile div::after {
-  transition: 0.5s;
+  transition: 0.2s;
   transform: rotate(0);
   transform: translateY(13px);
 }
 
 header nav .menu-mobile div::before {
-  transition: 0.5s;
+  transition: 0.2s;
   transform: rotate(0);
   transform: translateY(-13px);
 }

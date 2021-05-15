@@ -1,11 +1,14 @@
 export default function mobile() {
-    const menu = document.querySelector('.menu-mobile');
+    const menu = document.querySelector('.menu-mobile div');
     const links = document.querySelector('[data-menu="links"]');
+    const tipos = ['touchstart', 'click'];
 
-    if (!!menu && !!links) {
-        menu.addEventListener('click', (event) => {
-            event.target.classList.toggle('ativo');
-            links.classList.toggle('ativo');
-        });
+    function ativar(event) {
+        event.target.classList.toggle('ativo');
+        links.classList.toggle('ativo');
     }
+
+    tipos.forEach((tipo) => {
+        menu.addEventListener(tipo, ativar);
+    })
 }
