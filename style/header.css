@@ -135,7 +135,7 @@ header .svgHEADER {
 
   header nav {
     grid-column: 1;
-    padding: 20px 40px;
+    padding: 0 30px;
   }
 
   header nav .menu-mobile {
@@ -162,6 +162,7 @@ header .svgHEADER {
     flex-direction: column;
     min-width: 150px;
     margin: 1em 0;
+    z-index: 5;
   }
 
   header nav .menu ul.ativo {
