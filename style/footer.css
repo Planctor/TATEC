@@ -122,17 +122,30 @@ footer .conteudo form {
   flex-direction: column;
 }
 
+footer .endereco h3 {
+  color:white;
+  font-size: 2.5rem;
+  font-size: Roboto;
+  padding: 0 10px 0 0;
+}
+
 footer .endereco a{
   text-decoration: none;
-  color:white;
-  font-size: 6mm;
-  padding: 1px;
+  color:rgb(239, 241, 248);
+  font-size: 1.5rem;
+  padding: 10px;
+  display: flex;
+  align-content:center;
 }
-footer .endereco i{
+
+footer .endereco p{
+  margin-left: 15px;
+}
+
+footer .endereco a i{
   text-decoration: none;
-  background: linear-gradient(rgb(190, 3, 3), rgb(255, 196, 1),rgb(190, 3, 3));
-  color: rgb(190, 3, 3);
-  font-size: 10mm;
+  color: rgb(239, 241, 248);
+  font-size: 2rem;
 }
 
 @media (max-width: 1000px) {
