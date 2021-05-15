@@ -2,7 +2,7 @@ export default function show() {
     const btn = document.querySelector('.voltarTopo');
     const header = document.querySelector('[data-topo]');
     const limite = header.clientHeight;
-    const debouced = deb(scroll, 100);
+    const debouced = deb(scroll, 200);
 
     function deb(funcao, delay) {
         let timer;
