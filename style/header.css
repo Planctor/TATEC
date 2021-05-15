@@ -135,7 +135,7 @@ header .svgHEADER {
 
   header nav {
     grid-column: 1;
-    padding: 50px;
+    padding: 20px 40px;
   }
 
   header nav .menu-mobile {
