@@ -15,7 +15,17 @@ main .conteudo .texto {
   grid-column: 2;
 }
 
-main .conteudo .texto h2 {
+main .conteudo .texto div {
+  display: flex;
+  align-items: center;
+}
+
+main .conteudo .texto div img{
+  width: 35px;
+  height: 35px;
+}
+
+main .conteudo .texto div h2 {
   font-style: normal;
   font-weight: normal;
   font-size: 42px;
@@ -23,10 +33,7 @@ main .conteudo .texto h2 {
   color: #3c3b3b;
   display: flex;
   align-items: center;
-}
-
-main .conteudo .texto h2::before {
-  content: url("../img/FORMAS/Circulo.svg");
+  margin-left: .2em;
 }
 
 main .conteudo .texto p {
@@ -36,7 +43,8 @@ main .conteudo .texto p {
   line-height: 28px;
   letter-spacing: 0.5px;
   color: #3c3b3b;
-  margin: 0 0 0 10px;
+  margin: 0 10px 0 0;
+  margin: 1em 0;
 }
 
 main .conteudo .svg {
