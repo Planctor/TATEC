@@ -11,7 +11,7 @@ main .ativo {
   opacity: 1;
 }
 
-main .equipe div{
+main .equipe div {
   grid-row: 1;
   grid-column: 2;
   display: flex;
@@ -125,7 +125,7 @@ main .equipe .cards .card .redes {
 main .equipe .cards .card .redes a {
   color: #f8f8f8;
   font-size: 40px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 main .equipe .cards .card .redes a:hover {
@@ -162,5 +162,14 @@ main .equipe .cards .card .redes a:hover {
 
   main .equipe .cards .card {
     margin: 20px 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  main .equipe .texto div{
+    max-width: 300px;
+  }
+  main .equipe .svg img{
+    display:none ;
   }
 }

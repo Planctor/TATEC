@@ -80,7 +80,7 @@ main .conteudo .svg img {
     grid-row: 1;
   }
 
-  main .conteudo .texto h2 {
+  main .conteudo .texto div h2 {
     font-size: 24px;
   }
 
@@ -98,14 +98,11 @@ main .conteudo .svg img {
 }
 
 @media (max-width: 400px) {
-  main .conteudo .texto {
+  main .conteudo .texto div{
     max-width: 300px;
     margin-top: 0%;
   }
   main .conteudo .svg img{
-    display:none ;
-  }
-  main .apresentacao .svg img{
     display:none ;
   }
 }

@@ -23,6 +23,7 @@ main .apresentacao .texto {
 }
 
 main .apresentacao .texto div{
+  margin-top: 48px;
   display: flex;
 }
 
@@ -81,12 +82,12 @@ main .apresentacao .svg img {
     padding: 10px;
   }
 
-  main .apresentacao .texto {
+  main .apresentacao .texto div{
     grid-column: 1;
     grid-template-rows: 1;
   }
 
-  main .apresentacao .texto h2 {
+  main .apresentacao .texto div h2 {
     font-size: 24px;
   }
 
