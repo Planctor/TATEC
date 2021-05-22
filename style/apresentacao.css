@@ -76,8 +76,8 @@ main .apresentacao .svg img {
   main .apresentacao {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 1fr 1fr;
-    height: 800px;
+    grid-auto-rows: 2fr 1fr;
+    height: auto;
     justify-items: center;
     padding: 10px;
   }

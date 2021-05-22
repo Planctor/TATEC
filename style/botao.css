@@ -4,9 +4,9 @@
   color: #0c8a9b;
   cursor: pointer;
   display: none;
-  position: absolute;
-  bottom: 15px;
-  right: 25px;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
   z-index: 5;
 }
 
