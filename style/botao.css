@@ -4,7 +4,7 @@
   color: #0c8a9b;
   cursor: pointer;
   display: none;
-  position: fixed;
+  position: absolute;
   bottom: 15px;
   right: 25px;
   z-index: 5;
