@@ -189,6 +189,7 @@ header .svgHEADER {
   header .conteudo .conteudo-1 p {
     font-size: 24px;
     color: #eda82f;
+    text-align: center;
   }
 
   header .conteudo {
@@ -205,11 +206,11 @@ header .svgHEADER {
   }
   header .conteudo .conteudo-2 {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 2 ;
   }
 
   header .conteudo .conteudo-2 img {
-    max-width: 350px;
+    max-width: 450px;
     max-height: 400px;
   }
 }

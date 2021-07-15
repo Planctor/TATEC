@@ -73,6 +73,8 @@ main .conteudo .svg img {
     height: auto;
     justify-items: center;
     padding: 10px;
+    margin: -15% 3% 0 3%;
+    text-align: justify;
   }
 
   main .conteudo .texto {
@@ -87,6 +89,7 @@ main .conteudo .svg img {
   main .conteudo .svg {
     grid-column: 1;
     grid-row: 2;
+    margin-top: -10%;
   }
 
   main .conteudo .svg img {
