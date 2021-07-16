@@ -75,12 +75,12 @@ main .apresentacao .svg img {
 
   main .apresentacao {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-auto-rows: 2fr 1fr;
     height: auto;
     justify-items: center;
     padding: 10px;
-    margin: -15% 3% 0 3%;
+    margin-top: 3%;
     text-align: justify;
   }
 
@@ -100,7 +100,7 @@ main .apresentacao .svg img {
 
   main .apresentacao .svg img {
     display: relative;
-    max-width: 450px;
+    max-width: 350px;
     max-height: 400px;
     margin-top: -10%;
   }
@@ -109,5 +109,16 @@ main .apresentacao .svg img {
 @media (max-width: 400px) {
   main .apresentacao .texto {
     max-width: 300px;
+    
   }
+  main .apresentacao .texto div h2 {
+    font-size: 18px;
+  }
+  main .apresentacao {
+    text-align: left;
+    grid-template-columns: 90%;
+    margin: -3% 0 0 3%;
+    text-align: justify;
+  }
+  
 }

@@ -68,12 +68,12 @@ main .conteudo .svg img {
 
   main .conteudo {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 90%;
     grid-template-rows: 2fr 1fr;
     height: auto;
     justify-items: center;
     padding: 10px;
-    margin: -15% 3% 0 3%;
+    margin-left: 3%;
     text-align: justify;
   }
 
