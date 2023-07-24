@@ -57,6 +57,24 @@ main .conteudo .svg img {
   max-height: 500px;
 }
 
+/* Estilos para a lista de serviços */
+.texto ul {
+    list-style-type: none; /* Remover marcadores padrão da lista */
+    padding-left: 0; /* Remover recuo à esquerda */
+}
+
+.texto h3 {
+    color: #333; /* Cor do título */
+    font-size: 18px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Deixar o título em negrito */
+    margin: 0 0 10px; /* Espaçamento inferior do título */
+}
+
+.texto li {
+    font-size: 16px; /* Tamanho da fonte dos itens */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
 @media (max-width: 1000px) {
   body {
     display: grid;
