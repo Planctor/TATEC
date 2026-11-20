@@ -24,7 +24,6 @@ style.css             Todo o CSS, um arquivo só, dividido por blocos comentados
                       (FONTES, INDEX, HEADER, APRESENTACAO, SERVICOS, EQUIPE,
                       FOOTER, BOTAO, COOKIES, PRIVACIDADE, ANIMACOES)
 script.js             Ponto de entrada do JS (importa os módulos de scripts/)
-enviar_email.php      Recebe o formulário de contato e envia por e-mail
 
 scripts/
   menuMobile.js       Abre e fecha o menu no celular (Esc e clique fora também fecham)
@@ -119,9 +118,9 @@ Cada membro tem um card no `index.html` (seção `#equipe`) e uma página própr
 
 ## Formulário de contato
 
-O formulário envia para `enviar_email.php`, que usa a função `mail()` do PHP. O `scripts/contato.js` envia sem recarregar a página e mostra "Enviando…", sucesso ou erro; em erro, o texto digitado continua no formulário e aparece o link do WhatsApp. O PHP responde com status 500 quando o envio falha.
+O formulário envia para o [Formspree](https://formspree.io), que repassa cada mensagem por e-mail; funciona no GitHub Pages, sem servidor. O endereço fica no `action` do `<form>` no `index.html` (`https://formspree.io/f/<id>`), e o e-mail que recebe as mensagens é configurado no painel do Formspree.
 
-**Atenção:** o GitHub Pages só hospeda arquivos estáticos e não executa PHP, então o formulário não funciona na versão publicada. Para funcionar é preciso uma hospedagem com PHP e envio de e-mail configurado, ou trocar por um serviço de formulários (como Formspree ou Netlify Forms).
+O `scripts/contato.js` envia sem recarregar a página e mostra "Enviando…", sucesso ou erro; em erro, o texto digitado continua no formulário e aparece o link do WhatsApp. O campo `email` vira o "responder para" da mensagem, e o `_subject` escondido define o assunto.
 
 ## Cookies e privacidade
 
