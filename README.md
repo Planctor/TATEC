@@ -86,7 +86,7 @@ O site tem **um momento focal** e **uma leitura guiada pela rolagem**; o resto f
 
 - **Textura de filme:** o topo e o manifesto têm vinheta e granulado estático (SVG embutido no `style.css`).
 - **Hero:** abre do preto; fundo escuro (`--palco`) com luzes nas cores da marca que derivam devagar (e pausam quando o topo sai da tela). O título sobe palavra por palavra de trás de máscaras, e as quatro formas da marca flutuam em volta dele (também pausam fora da tela); ao rolar, o título recua e as formas se espalham.
-- **Manifesto** (entre "Bem-vindos" e "Serviços"): cena presa na tela. A seção tem ~1,7 tela de altura; o texto fica parado no meio enquanto "Sites. Sistemas. Design. Consultoria." acendem um por um, com as linhas entrando de lados alternados. Os trechos de cada linha ficam em `--de`/`--ate` no `style.css`.
+- **Manifesto** (entre "Bem-vindos" e "Serviços"): cena presa na tela. A seção tem ~1,3 tela de altura; o texto fica parado no meio enquanto "Sites. Sistemas. Design. Consultoria." acendem um por um, com as linhas entrando de lados alternados. Os trechos de cada linha ficam em `--de`/`--ate` no `style.css`.
 - **Textos e cards** (apresentação, serviços, etapas, time) sobem e aparecem ao entrar na tela, em cascata.
 - **Como trabalhamos:** a linha nas cores da marca que liga as etapas se desenha da esquerda para a direita com a rolagem.
 - **Títulos das seções** abrem da esquerda para a direita, como uma cartela de cinema.
