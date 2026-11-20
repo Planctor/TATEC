@@ -2145,137 +2145,111 @@ html {
       transform: scale(1.35);
     }
   }
+}
 
-  /* manifesto vira cena fixa: a seção tem ~1,3 tela de altura, o texto fica parado no meio
-     e cada linha acende na sua vez enquanto se rola (só onde há suporte; sem ele, seção normal) */
-  .manifesto {
-    height: 130svh;
-    padding-block: 0;
-    view-timeline: --manifesto block;
+/*
+  ENTRADAS: cada bloco toca sua animação POR TEMPO quando entra na tela (scripts/revelar.js
+  coloca .em-cena). A rolagem nunca fica presa: rolar rápido é rolar rápido.
+  As animações ficam pausadas no quadro inicial até lá; sem JS (sem html.cenas), tudo aparece pronto.
+*/
+.cenas .apresentacao .texto,
+.cenas .servico,
+.cenas .passo,
+.cenas .card {
+  animation: subir 800ms var(--ease-out) var(--atraso, 0ms) both paused;
+}
+
+/* cascata: cada item começa um pouco depois do anterior */
+.servico:nth-child(2), .passo:nth-child(2), .card:nth-child(2) { --atraso: 90ms; }
+.servico:nth-child(3), .passo:nth-child(3), .card:nth-child(3) { --atraso: 180ms; }
+.servico:nth-child(4), .passo:nth-child(4) { --atraso: 270ms; }
+
+/* títulos abrem como cartela de cinema, da esquerda para a direita */
+.cenas .titulo {
+  animation: cartela 900ms var(--ease-out) both paused;
+}
+
+/* ilustrações revelam de baixo para cima */
+.cenas [data-revelar] {
+  animation: revelar 1100ms var(--ease-out) both paused;
+}
+
+/* a linha das etapas se desenha junto com a cascata */
+.cenas .passos::before {
+  animation: tracar 1200ms var(--ease-in-out) 150ms both paused;
+}
+
+/* manifesto: linhas entram de lados alternados e acendem uma depois da outra */
+.cenas .manifesto-lista li {
+  /* apagado, mas ainda legível: ~3.1:1 sobre --palco (mínimo para texto grande) */
+  color: rgba(255, 255, 255, 0.36);
+  animation:
+    deslizar 900ms var(--ease-out) var(--atraso, 0ms) both paused,
+    acender 600ms ease calc(var(--atraso, 0ms) + 300ms) both paused;
+}
+
+.cenas .manifesto-lista span {
+  opacity: 0.2;
+  animation: acender-ponto 400ms ease calc(var(--atraso, 0ms) + 700ms) both paused;
+}
+
+.manifesto-lista li:nth-child(2) { --atraso: 250ms; }
+.manifesto-lista li:nth-child(3) { --atraso: 500ms; }
+.manifesto-lista li:nth-child(4) { --atraso: 750ms; }
+
+.manifesto-lista li:nth-child(even) {
+  --lado: 1;
+}
+
+/* entrou na tela: toca (seletores mais específicos que os de cima, de propósito) */
+.cenas .em-cena:is(.texto, .servico, .passo, .card, .titulo, [data-revelar]),
+.cenas .manifesto.em-cena .manifesto-lista li,
+.cenas .manifesto.em-cena .manifesto-lista span,
+.cenas .passos.em-cena::before {
+  animation-play-state: running;
+}
+
+@keyframes subir {
+  from {
+    opacity: 0;
+    translate: 0 32px;
   }
+}
 
-  .manifesto > .container {
-    position: sticky;
-    top: 0;
-    min-height: 100svh;
-    display: grid;
-    align-content: center;
+@keyframes cartela {
+  from {
+    clip-path: inset(0 100% 0 0);
   }
+}
 
-  .manifesto-lista li {
-    /* apagado, mas ainda legível: ~3.1:1 sobre --palco (mínimo para texto grande) */
-    color: rgba(255, 255, 255, 0.36);
-    animation: acender linear both, deslizar var(--ease-out) both;
-    animation-timeline: --manifesto, --manifesto;
-    /* "contain" = o trecho em que a cena está presa na tela; as linhas se sobrepõem para o ritmo ficar corrido */
-    animation-range: contain var(--de, 0%) contain var(--ate, 25%);
+@keyframes revelar {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(32px);
   }
+}
 
-  .manifesto-lista li:nth-child(2) { --de: 18%; --ate: 43%; }
-  .manifesto-lista li:nth-child(3) { --de: 36%; --ate: 61%; }
-  .manifesto-lista li:nth-child(4) { --de: 54%; --ate: 79%; }
-
-  /* travelling: linhas alternadas entram de lados opostos */
-  .manifesto-lista li:nth-child(even) {
-    --lado: 1;
+@keyframes tracar {
+  from {
+    transform: scaleX(0);
   }
+}
 
-  @keyframes deslizar {
-    from {
-      transform: translateX(calc(var(--lado, -1) * 8vw));
-    }
+@keyframes deslizar {
+  from {
+    transform: translateX(calc(var(--lado, -1) * 8vw));
   }
+}
 
-  /* títulos das seções abrem como cartela de cinema, da esquerda para a direita */
-  .titulo {
-    animation: cartela linear both;
-    animation-timeline: view();
-    animation-range: entry 10% entry 100%;
+@keyframes acender {
+  to {
+    color: var(--branco);
   }
+}
 
-  @keyframes cartela {
-    from {
-      clip-path: inset(0 100% 0 0);
-    }
-  }
-
-  .manifesto-lista span {
-    opacity: 0.2;
-    animation: acender-ponto linear both;
-    animation-timeline: --manifesto;
-    animation-range: contain var(--ate, 25%) contain calc(var(--ate, 25%) + 4%);
-  }
-
-  /* textos sobem e aparecem ao entrar na tela, como nas páginas de produto.
-     Usa "translate" (não "transform") para não brigar com o hover dos cards */
-  .apresentacao .texto,
-  .servico,
-  .passo,
-  .card {
-    animation: subir linear both;
-    animation-timeline: view();
-    /* termina assim que o bloco entra na tela: aparece rápido ao rolar */
-    animation-range: entry 0% entry 70%;
-  }
-
-  /* serviços, etapas e cards em cascata: cada um começa um pouco depois */
-  .servico:nth-child(2),
-  .passo:nth-child(2),
-  .card:nth-child(2) { animation-range: entry 10% entry 80%; }
-  .servico:nth-child(3),
-  .passo:nth-child(3),
-  .card:nth-child(3) { animation-range: entry 20% entry 90%; }
-  .servico:nth-child(4),
-  .passo:nth-child(4) { animation-range: entry 30% entry 100%; }
-
-  /* a linha das etapas se desenha da esquerda para a direita junto com a cascata */
-  .passos {
-    view-timeline: --passos block;
-  }
-
-  .passos::before {
-    animation: tracar linear both;
-    animation-timeline: --passos;
-    animation-range: entry 10% cover 40%;
-  }
-
-  @keyframes tracar {
-    from {
-      transform: scaleX(0);
-    }
-  }
-
-  @keyframes subir {
-    from {
-      opacity: 0;
-      translate: 0 32px;
-    }
-  }
-
-  @keyframes acender {
-    to {
-      color: var(--branco);
-    }
-  }
-
-  @keyframes acender-ponto {
-    to {
-      opacity: 1;
-    }
-  }
-
-  /* ilustrações das seções: revelam de baixo para cima ao entrar na tela */
-  [data-revelar] {
-    animation: revelar linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 90%;
-  }
-
-  @keyframes revelar {
-    from {
-      clip-path: inset(0 0 100% 0);
-      transform: translateY(32px);
-    }
+@keyframes acender-ponto {
+  to {
+    opacity: 1;
   }
 }
 
@@ -2284,31 +2258,26 @@ html {
     scroll-behavior: auto;
   }
 
-  /* sem deslocamento: só aparecer suave; a cor do manifesto continua (não é movimento) */
   .topo::before,
   .rolou .nav-barra,
   .hero-titulo,
-  .titulo,
-  .apresentacao .texto,
-  .servico,
-  .passo,
-  .passos::before,
-  .card,
-  [data-revelar] {
+  .forma,
+  .cenas .passos::before {
     animation: none;
   }
 
-  /* manifesto mantém só o acender (cor), sem o travelling */
-  @supports (animation-timeline: view()) {
-    .manifesto-lista li {
-      animation: acender linear both;
-      animation-timeline: --manifesto;
-      animation-range: contain var(--de, 0%) contain var(--ate, 25%);
-    }
+  /* entradas sem deslocamento: só aparecer; o manifesto só muda de cor (não é movimento) */
+  .cenas .apresentacao .texto,
+  .cenas .servico,
+  .cenas .passo,
+  .cenas .card,
+  .cenas .titulo,
+  .cenas [data-revelar] {
+    animation-name: fade;
   }
 
-  .forma {
-    animation: none;
+  .cenas .manifesto-lista li {
+    animation-name: none, acender;
   }
 
   .palavra > span,

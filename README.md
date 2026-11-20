@@ -30,6 +30,7 @@ scripts/
   showButton.js       Fixa o menu e mostra o "voltar ao topo" quando o topo sai da tela
   cookies.js          Aviso e preferências de cookies
   contato.js          Envia o formulário sem sair da página (enviando / enviado / erro)
+  revelar.js          Marca com .em-cena cada bloco que entra na tela, para o CSS tocar a entrada
 
 fonts/                Nunito (400 e 700), só os subconjuntos latin e latin-ext
 img/
@@ -86,13 +87,13 @@ O site tem **um momento focal** e **uma leitura guiada pela rolagem**; o resto f
 
 - **Textura de filme:** o topo e o manifesto têm vinheta e granulado estático (SVG embutido no `style.css`).
 - **Hero:** abre do preto; fundo escuro (`--palco`) com luzes nas cores da marca que derivam devagar (e pausam quando o topo sai da tela). O título sobe palavra por palavra de trás de máscaras, e as quatro formas da marca flutuam em volta dele (também pausam fora da tela); ao rolar, o título recua e as formas se espalham.
-- **Manifesto** (entre "Bem-vindos" e "Serviços"): cena presa na tela. A seção tem ~1,3 tela de altura; o texto fica parado no meio enquanto "Sites. Sistemas. Design. Consultoria." acendem um por um, com as linhas entrando de lados alternados. Os trechos de cada linha ficam em `--de`/`--ate` no `style.css`.
+- **Manifesto** (entre "Bem-vindos" e "Serviços"): quando entra na tela, "Sites. Sistemas. Design. Consultoria." entram de lados alternados e acendem um por um. O intervalo entre as linhas fica em `--atraso` no `style.css`.
 - **Textos e cards** (apresentação, serviços, etapas, time) sobem e aparecem ao entrar na tela, em cascata.
-- **Como trabalhamos:** a linha nas cores da marca que liga as etapas se desenha da esquerda para a direita com a rolagem.
+- **Como trabalhamos:** a linha nas cores da marca que liga as etapas se desenha da esquerda para a direita.
 - **Títulos das seções** abrem da esquerda para a direita, como uma cartela de cinema.
 - **Ilustrações** das seções se revelam de baixo para cima ao entrar na tela.
 
-As animações ligadas à rolagem usam CSS nativo (`animation-timeline: scroll()` / `view()`), sem JavaScript. Navegadores sem suporte (como o Firefox atual) mostram tudo pronto e parado.
+**A rolagem nunca fica presa à animação.** As entradas tocam por tempo, no próprio ritmo, assim que o bloco entra na tela (`scripts/revelar.js` coloca a classe `.em-cena`); quem rola rápido passa direto. Sem JavaScript, tudo aparece pronto. Só o topo usa animação ligada à rolagem (`animation-timeline: scroll()`): o título recua e as formas se espalham ao rolar; navegadores sem suporte (como o Firefox atual) mostram o topo parado.
 
 Ao adicionar novas animações, mantenha estas regras:
 
