@@ -1,38 +1,13 @@
+// Quando o conteúdo do topo sai da tela: fixa o menu e mostra o "voltar ao topo".
 export default function show() {
-    const btn = document.querySelector('.voltarTopo');
-    const header = document.querySelector('[data-topo]');
-    const limite = header.clientHeight;
-    const debouced = deb(scroll, 200);
+    const btn = document.querySelector('[data-btn]');
+    const hero = document.querySelector('.hero');
 
-    function deb(funcao, delay) {
-        let timer;
-        return () => {
-            if (timer) {
-                clearInterval(timer);
-            }
-            timer = setTimeout(() => {
-                funcao();
-                timer = null;
-            }, delay);
-        };
-    }
+    if (!hero || !('IntersectionObserver' in window)) return;
 
-    function scroll() {
-        if (window.scrollY > limite) {
-            btn.style.display += 'block';
-        } else if (window.scrollY < limite) {
-            btn.removeAttribute('style');
-        }
-    }
-
-    window.addEventListener('scroll', debouced);
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const topo = btn.attributes[0].textContent;
-        const subir = document.getElementById(topo);
-
-        subir.scrollIntoView({
-            behavior: 'smooth',
-        });
-    });
+    new IntersectionObserver(([entrada]) => {
+        const rolou = !entrada.isIntersecting;
+        document.body.classList.toggle('rolou', rolou);
+        if (btn) btn.classList.toggle('visivel', rolou);
+    }).observe(hero);
 }

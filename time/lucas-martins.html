@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lucas Martins, Infraestrutura e Redes na TATEC.">
+    <meta name="theme-color" content="#0c8a9b">
+
+    <link rel="icon" href="../img/LOGO/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../img/LOGO/apple-touch-icon.png">
+    <title>Lucas Martins | TATEC</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="pagina-perfil">
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="politica-topo">
+        <div class="container politica-topo-barra">
+            <a href="../index.html" class="nav-logo">
+                <img src="../img/LOGO/logo.png" alt="TATEC, voltar para a página inicial" width="140" height="25">
+            </a>
+            <a href="../index.html#equipe" class="politica-voltar">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                Voltar ao time
+            </a>
+        </div>
+        <div class="container perfil-cabecalho">
+            <img class="perfil-foto" src="../img/EQUIPE/lucas-martins.svg" alt="" width="120" height="120">
+            <div>
+                <h1>Lucas Martins</h1>
+                <p class="perfil-cargo">Infraestrutura e Redes</p>
+                <!-- TODO: trocar cada span.rede-inativa por <a href="..."> quando tiver os links -->
+                <div class="redes" aria-hidden="true">
+                    <span class="rede-inativa" title="Facebook (em breve)"><i class="fab fa-facebook-square" aria-hidden="true"></i></span>
+                    <span class="rede-inativa" title="LinkedIn (em breve)"><i class="fab fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="rede-inativa" title="GitHub (em breve)"><i class="fab fa-github-square" aria-hidden="true"></i></span>
+                    <span class="rede-inativa" title="WhatsApp (em breve)"><i class="fab fa-whatsapp-square" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo" class="container perfil">
+        <div class="perfil-principal">
+            <section>
+                <h2>Sobre</h2>
+                <p>Responsável pela infraestrutura e pelas redes. <mark class="preencher">[completar resumo]</mark></p>
+            </section>
+
+            <section>
+                <h2>Experiência</h2>
+                <ol class="perfil-linha">
+                    <li><mark class="preencher">[preencher cargo, empresa, período e o que fazia]</mark></li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Formação</h2>
+                <ol class="perfil-linha">
+                    <li><mark class="preencher">[preencher curso, instituição e ano]</mark></li>
+                </ol>
+            </section>
+        </div>
+
+        <aside class="perfil-lateral">
+            <section>
+                <h2>Habilidades</h2>
+                <ul class="tags">
+                    <li><mark class="preencher">[preencher habilidades]</mark></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Certificações</h2>
+                <ul class="perfil-certificados">
+                    <li><mark class="preencher">[preencher nome, emissor e ano]</mark></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="politica-rodape">
+        <div class="direitos">
+            <p>Todos os direitos reservados à TATEC LTDA</p>
+            <ul class="direitos-links">
+                <li><a href="../privacidade.html">Política de Privacidade</a></li>
+                <li><button type="button" data-cookies>Gerenciar cookies</button></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module">
+        import cookies from '../scripts/cookies.js';
+        cookies();
+    </script>
+</body>
+
+</html>

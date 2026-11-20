@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mail($para, $assunto, $mensagem_completa)) {
         echo "Mensagem enviada com sucesso!";
     } else {
+        http_response_code(500); // o formulário (scripts/contato.js) usa o status para mostrar o erro
         echo "Ocorreu um erro ao enviar a mensagem.";
     }
 }

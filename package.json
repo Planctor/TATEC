@@ -19,10 +19,6 @@
     "url": "https://github.com/Planctor/TATEC/issues"
   },
   "homepage": "https://github.com/Planctor/TATEC#readme",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "get-google-fonts": "^1.2.2"
-  },
   "devDependencies": {
     "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.2.1",

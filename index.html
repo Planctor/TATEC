@@ -3,214 +3,303 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TATEC: desenvolvimento de sites, sistemas, identidade visual e consultoria em TI.">
+    <meta name="theme-color" content="#0e0b16">
 
-    <title>Inicio</title>
+    <link rel="icon" href="img/LOGO/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/LOGO/apple-touch-icon.png">
+    <title>TATEC | Soluções em informática</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- <link href="node_modules/@fortawesome/fontawesome-free/css/all.css" rel='stylesheet'> -->
-    <link href='node_modules/get-google-fonts/main.js' type='text/css'>
-
-    <!-- cdn apenas para mostrar o git, deve ser removido qnd hospedado --->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel='stylesheet'>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header id="voltarTopo" data-topo>
-        <nav>
-            <img src="img/LOGO/logo.png" alt="logo">
-            <div class="menu">
-                <div class="menu-mobile">
-                    <div></div>
-                </div>
-                <ul data-menu='links'>
-                    <li><a href="#quemsomos">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#equipe">Nosso Time</a></li>
-                    <li><a href="#contato">Contatos</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="conteudo">
-            <div class="conteudo-1">
-                <!-- <h2>Tatec</h2> -->
-                <p>Potencialize o seu negócio com nossas soluções em <b>informática</b>.</p>
-            </div>
-            <div class="conteudo-2">
-                <img class="svg" src="img/SVG_DESENHO/Notebook.svg" alt="desenho">
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo" id="topo" data-topo>
+        <div class="nav-espaco">
+            <div class="nav-barra">
+                <nav class="nav container" aria-label="Principal">
+                    <a href="#topo" class="nav-logo">
+                        <img src="img/LOGO/logo.png" alt="TATEC" width="140" height="25">
+                    </a>
+                    <ul class="menu" id="menu" data-menu="links">
+                        <li><a href="#quemsomos">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#equipe">Time</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                    <a class="botao-primario nav-cta" href="#contato">Fale com a gente</a>
+                    <button class="menu-mobile" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu" data-menu="botao">
+                        <span></span>
+                    </button>
+                </nav>
             </div>
         </div>
-        <img class="svgHEADER" src="img/FORMAS/Vector.svg">
+
+        <div class="hero container">
+            <!-- aria-label: leitores de tela leem a frase inteira, não palavra por palavra -->
+            <h1 class="hero-titulo" aria-label="Sites, sistemas e design sob medida para o seu negócio.">
+                <span aria-hidden="true"><span class="palavra"><span style="--i:0">Sites,</span></span> <span class="palavra"><span style="--i:1">sistemas</span></span> <span class="palavra"><span style="--i:2">e</span></span> <span class="palavra"><span style="--i:3">design</span></span> <span class="palavra"><span style="--i:4"><b>sob</b></span></span> <span class="palavra"><span style="--i:5"><b>medida</b></span></span> <span class="palavra"><span style="--i:6">para</span></span> <span class="palavra"><span style="--i:7">o</span></span> <span class="palavra"><span style="--i:8">seu</span></span> <span class="palavra"><span style="--i:9">negócio.</span></span></span>
+            </h1>
+            <div class="hero-acoes">
+                <a class="botao-primario" href="#contato">Fale com a gente</a>
+                <a class="botao-link" href="#servicos">Conheça os serviços</a>
+            </div>
+            <div class="hero-formas" aria-hidden="true">
+                <img class="forma forma-1" src="img/FORMAS/Triangulo.svg" alt="" width="63" height="64">
+                <img class="forma forma-2" src="img/FORMAS/Circulo.svg" alt="" width="58" height="58">
+                <img class="forma forma-3" src="img/FORMAS/Estrela.svg" alt="" width="72" height="69">
+                <img class="forma forma-4" src="img/FORMAS/Quadrado.svg" alt="" width="56" height="56">
+            </div>
+        </div>
+        <img class="onda onda-topo" src="img/FORMAS/Vector.svg" alt="" aria-hidden="true">
     </header>
 
-    <main>
-        <section class="apresentacao" id="quemsomos" data-menu='conteudo' data-anima>
+    <main id="conteudo">
+        <section class="apresentacao secao container" id="quemsomos">
             <div class="texto">
-                <div>
-                    <img src="img/FORMAS/Triangulo.svg" alt="forma">
-                    <h2>Bem-vindos ao TATEC</h2>
-                </div>
-
+                <h2 class="titulo"><img src="img/FORMAS/Triangulo.svg" alt="" width="40" height="40">Bem-vindos à TATEC</h2>
                 <p>
-                    Se você está buscando impulsionar sua presença online ou otimizar os processos da sua empresa, você está no lugar certo.
-                    Nós oferecemos uma ampla gama de serviços para atender às suas necessidades específicas e ajudá-lo a alcançar seus objetivos de negócio.
+                    A TATEC é um time de três pessoas que cuida do digital da sua empresa de ponta a ponta:
+                    o site que apresenta o seu negócio, o sistema que organiza o dia a dia e a identidade visual que dá cara a tudo.
                 </p>
                 <p>
-                    Nossos especialistas altamente qualificados estão prontos para criar sites impressionantes que capturam a essência da sua marca e
-                    atraem seu público-alvo. Além disso, nossos sistemas personalizados e inovadores são projetados para
-                    melhorar a eficiência operacional da sua empresa, economizando tempo e recursos valiosos.
+                    Como o time é pequeno, você conversa com as mesmas pessoas do primeiro contato à entrega,
+                    e cada etapa é explicada sem jargão.
                 </p>
             </div>
-            <div class="svg">
-                <img src="img/SVG_DESENHO/Apresentacao.svg" alt="Apresentaçao">
+            <img class="ilustracao" data-revelar src="img/SVG_DESENHO/Apresentacao.svg" alt="" width="697" height="659">
+        </section>
+
+        <section class="manifesto" aria-labelledby="manifesto-titulo">
+            <div class="container">
+                <h2 class="sr-only" id="manifesto-titulo">O que fazemos</h2>
+                <ul class="manifesto-lista">
+                    <li>Sites<span>.</span></li>
+                    <li>Sistemas<span>.</span></li>
+                    <li>Design<span>.</span></li>
+                    <li>Consultoria<span>.</span></li>
+                </ul>
             </div>
         </section>
 
-        <section class="conteudo" id="servicos" data-menu='conteudo' data-anima>
-            <div class="svg">
-                <img src="img/SVG_DESENHO/Servicos.svg" alt="servicos">
+        <section class="servicos secao container" id="servicos">
+            <div class="servicos-lado">
+                <h2 class="titulo"><img src="img/FORMAS/Circulo.svg" alt="" width="40" height="40">Nossos serviços</h2>
+                <img class="ilustracao" data-revelar src="img/SVG_DESENHO/Servicos.svg" alt="" width="658" height="685">
             </div>
-            <div class="texto">
-                <div>
-                    <img src="img/FORMAS/Circulo.svg" alt="forma">
-                    <h2>Nossos serviços</h2>
+
+            <div class="servicos-lista">
+                <div class="servico">
+                    <h3>Sites</h3>
+                    <p class="servico-resultado">Sua empresa encontrada e bem apresentada em qualquer tela.</p>
+                    <ul>
+                        <li>Sites institucionais, blogs e portfólios</li>
+                        <li>Lojas virtuais sob medida</li>
+                        <li>Rápidos, responsivos e integrados aos seus sistemas</li>
+                    </ul>
                 </div>
-
-                <p>
-                    <h3>Desenvolvimento de Sites:</h3>
+                <div class="servico">
+                    <h3>Sistemas</h3>
+                    <p class="servico-resultado">Menos planilha e retrabalho no dia a dia.</p>
                     <ul>
-                        <li>Criação de sites institucionais</li>
-                        <li>Lojas virtuais (e-commerce) personalizadas</li>
-                        <li>Blogs e portfólios online</li>
-                        <li>Sites responsivos e otimizados para dispositivos móveis</li>
-                        <li>Integração com sistemas e APIs externas</li>
-                        <li>Otimização de velocidade e desempenho</li>
+                        <li>Gestão da empresa (ERP) e de clientes (CRM)</li>
+                        <li>Controle de estoque e logística</li>
+                        <li>Automação de processos e integração com o que você já usa</li>
                     </ul>
-                </p>
-                <p>
-                    <h3>Desenvolvimento de Sistemas:</h3>
+                </div>
+                <div class="servico">
+                    <h3>Design e identidade visual</h3>
+                    <p class="servico-resultado">Uma marca reconhecível em tudo que você publica.</p>
                     <ul>
-                        <li>Sistemas de gestão empresarial (ERP)</li>
-                        <li>Sistemas de gestão de relacionamento com o cliente (CRM)</li>
-                        <li>Softwares de gestão de estoque e logística</li>
-                        <li>Soluções personalizadas para automação de processos internos</li>
-                        <li>Integração com bancos de dados e sistemas legados</li>
+                        <li>Logotipo e identidade de marca</li>
+                        <li>Peças gráficas para divulgação</li>
+                        <li>Telas fáceis de usar (UI/UX)</li>
                     </ul>
-                </p>
-
-                <p>
-                    <h3>Design e Identidade Visual:</h3>
+                </div>
+                <div class="servico">
+                    <h3>Consultoria em TI</h3>
+                    <p class="servico-resultado">A tecnologia certa escolhida antes de gastar.</p>
                     <ul>
-                        <li>Criação de logotipos e identidade de marca</li>
-                        <li>Design gráfico para materiais promocionais</li>
-                        <li>UI/UX Design para interfaces de usuário amigáveis</li>
+                        <li>Levantamento do que a empresa precisa</li>
+                        <li>Recomendação de soluções adequadas</li>
+                        <li>Avaliação de segurança e proteção de dados</li>
                     </ul>
-                </p>
-                <p>
-                    <h3>Consultoria em TI:</h3>
-                    <ul>
-                        <li>Análise de requisitos e levantamento de necessidades</li>
-                        <li>Recomendação de soluções tecnológicas adequadas</li>
-                        <li>Avaliação de segurança da informação e estratégias de proteção de dados</li>
-                    </ul>
-                </p>
+                </div>
             </div>
         </section>
 
-        <section class="equipe" id="equipe" data-menu='conteudo'>
-            <div>
-                <img src="img/FORMAS/Estrela.svg" alt="forma">
-                <h2 class="titulo">Time</h2>
+        <section class="processo" id="processo" aria-labelledby="processo-titulo">
+            <div class="container secao">
+                <h2 class="titulo" id="processo-titulo"><img src="img/FORMAS/Triangulo.svg" alt="" width="40" height="40">Como trabalhamos</h2>
+                <ol class="passos">
+                    <li class="passo">
+                        <span class="passo-num" aria-hidden="true">01</span>
+                        <h3>Conversa</h3>
+                        <p>Entendemos o seu negócio e o que precisa ser resolvido.</p>
+                    </li>
+                    <li class="passo">
+                        <span class="passo-num" aria-hidden="true">02</span>
+                        <h3>Proposta</h3>
+                        <p>Você recebe escopo, prazo e valor por escrito antes de começarmos.</p>
+                    </li>
+                    <li class="passo">
+                        <span class="passo-num" aria-hidden="true">03</span>
+                        <h3>Construção</h3>
+                        <p>Desenvolvemos em etapas e mostramos o andamento para você aprovar.</p>
+                    </li>
+                    <li class="passo">
+                        <span class="passo-num" aria-hidden="true">04</span>
+                        <h3>Entrega</h3>
+                        <p>Publicamos, explicamos como usar e seguimos por perto para ajustes.</p>
+                    </li>
+                </ol>
             </div>
+        </section>
+
+        <section class="equipe secao container" id="equipe">
+            <h2 class="titulo"><img src="img/FORMAS/Estrela.svg" alt="" width="40" height="40">Time</h2>
 
             <div class="cards">
-                <div class="card">
-                    <span>DEV FULL-STACK</span>
-
-                    <img src="https://i.ibb.co/tByhfyN/male.png" alt="foto">
-                    <h3>Marcos</h3>
-
-                    <p>
-                        Sou graduado em Ciência da Computação, e possuo uma vasta experiência no desenvolvimento de sistemas e websites
-                        <br>
-                        Minhas habilidades estão focadas principalmente no front-end, onde utilizo linguagens e frameworks de ponta, tais como JavaScript, jQuery, Bootstrap, AngularJS, React e Vue.js.
-                        Além disso, possuo sólidos conhecimentos em back-end, trabalhando com linguagens como PHP, Java, C# e Python, e também possuo experiência com bancos de dados SQL, MySQL e Oracle SQL.
-                    </p>
-
-                    <span>Clique para ver perfil</span>
-
-                    <div class="redes">
-                        <a href="https://www.facebook.com/marcospaulo.carneirotavares/" target="_blank">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-
-                        <a href="https://github.com/marcoscarneiro2" target="_blank">
-                            <i class="fab fa-git-square"></i>
-                        </a>
-
-                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994629747" target="_blank">
-                            <i class="fab fa-whatsapp-square"></i>
-                        </a>
+                <article class="card">
+                    <div class="card-perfil">
+                        <img class="card-foto" src="img/EQUIPE/marcos.svg" alt="" width="96" height="96">
+                        <h3>Marcos</h3>
+                        <p class="card-cargo">Dev Full-Stack</p>
                     </div>
-                </div>
+                    <div class="card-bio">
+                        <p>Graduado em Ciência da Computação, com vasta experiência no desenvolvimento de sistemas e websites.</p>
+                        <a class="card-link" href="time/marcos.html">Ver perfil completo<span class="sr-only"> de Marcos</span></a>
+                        <div class="redes">
+                            <a href="https://www.facebook.com/marcospaulo.carneirotavares/" target="_blank" rel="noopener" aria-label="Facebook de Marcos">
+                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/marcos-paulo-carneiro-tavares-b0b563131/" target="_blank" rel="noopener" aria-label="LinkedIn de Marcos">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/marcoscarneiro2" target="_blank" rel="noopener" aria-label="GitHub de Marcos">
+                                <i class="fab fa-github-square" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994629747" target="_blank" rel="noopener" aria-label="WhatsApp de Marcos">
+                                <i class="fab fa-whatsapp-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-perfil">
+                        <img class="card-foto" src="img/EQUIPE/lucas-fernandes.svg" alt="" width="96" height="96">
+                        <h3>Lucas Fernandes</h3>
+                        <p class="card-cargo">Liderança e Produto</p>
+                    </div>
+                    <div class="card-bio">
+                        <p>Responsável pela liderança da equipe e pela gestão de produtos.</p>
+                        <a class="card-link" href="time/lucas-fernandes.html">Ver perfil completo<span class="sr-only"> de Lucas Fernandes</span></a>
+                        <!-- TODO: quando tiver os links, trocar cada span.rede-inativa por <a href="..."> como no card do Marcos: Lucas Fernandes -->
+                        <div class="redes" aria-hidden="true">
+                            <span class="rede-inativa" title="Facebook de Lucas Fernandes (em breve)">
+                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                            </span>
+                            <span class="rede-inativa" title="LinkedIn de Lucas Fernandes (em breve)">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                            <span class="rede-inativa" title="GitHub de Lucas Fernandes (em breve)">
+                                <i class="fab fa-github-square" aria-hidden="true"></i>
+                            </span>
+                            <span class="rede-inativa" title="WhatsApp de Lucas Fernandes (em breve)">
+                                <i class="fab fa-whatsapp-square" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-perfil">
+                        <img class="card-foto" src="img/EQUIPE/lucas-martins.svg" alt="" width="96" height="96">
+                        <h3>Lucas Martins</h3>
+                        <p class="card-cargo">Infraestrutura e Redes</p>
+                    </div>
+                    <div class="card-bio">
+                        <p>Responsável pela infraestrutura e pelas redes.</p>
+                        <a class="card-link" href="time/lucas-martins.html">Ver perfil completo<span class="sr-only"> de Lucas Martins</span></a>
+                        <!-- TODO: quando tiver os links, trocar cada span.rede-inativa por <a href="..."> como no card do Marcos: Lucas Martins -->
+                        <div class="redes" aria-hidden="true">
+                            <span class="rede-inativa" title="Facebook de Lucas Martins (em breve)">
+                                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                            </span>
+                            <span class="rede-inativa" title="LinkedIn de Lucas Martins (em breve)">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                            <span class="rede-inativa" title="GitHub de Lucas Martins (em breve)">
+                                <i class="fab fa-github-square" aria-hidden="true"></i>
+                            </span>
+                            <span class="rede-inativa" title="WhatsApp de Lucas Martins (em breve)">
+                                <i class="fab fa-whatsapp-square" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
-    <div id="botao">
-        <a href="#topo">
-            <div class="voltarTopo" data-btn></div>
-        </a>
-    </div>
+    <a href="#topo" class="voltar-topo" aria-label="Voltar ao topo" data-btn>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
 
-    <footer id="contato" data-menu='conteudo'>
-        <img src="./img/FORMAS/OndaFooter.svg">
-        <div class="conteudo">
+    <footer class="rodape" id="contato">
+        <img class="onda onda-rodape" src="img/FORMAS/OndaFooter.svg" alt="" aria-hidden="true">
 
-            <div>
-                <img class="forma" src="img/FORMAS/Quadrado.svg" alt="forma">
-                <h2>Contatos</h2>
+        <div class="rodape-grid container">
+            <div class="contato">
+                <h2 class="titulo"><img src="img/FORMAS/Quadrado.svg" alt="" width="40" height="40">Contato</h2>
+
+                <form method="post" action="enviar_email.php" data-contato>
+                    <div class="form-linha">
+                        <div class="campo">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" autocomplete="name" required>
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required rows="4"></textarea>
+                    </div>
+
+                    <p class="form-aviso">
+                        Usamos seus dados apenas para responder a esta mensagem.
+                        Veja a <a href="privacidade.html">Política de Privacidade</a>.
+                    </p>
+
+                    <button class="botao-enviar" type="submit">Enviar mensagem</button>
+                    <p class="form-status" role="status" data-form-status></p>
+                </form>
             </div>
 
-            <form method="post" action="enviar_email.php">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" name="nome">
+            <div class="endereco">
+                <p class="endereco-marca">TATEC</p>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" required rows="6"></textarea>
-
-                <div class="botao">
-                    <input class="enviar" type="submit" value="enviar">
-                </div>
-            </form>
-
-        </div>
-        <div class="endereco">
-            <h3>TATEC</h3>
-
-            <a href="#" target="_blank">
-                <i class="fab fa-facebook-square"></i>
-                <p>Visite nossa página</p>
-            </a>
-
-            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994951589" target="_blank">
-                <i class="fab fa-whatsapp-square"></i>
-                <p>(21) 99462-9747</p>
-            </a>
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5521994629747" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp-square" aria-hidden="true"></i>
+                    <span>(21) 99462-9747</span>
+                </a>
+            </div>
         </div>
 
         <div class="direitos">
-            <p>Todos os direitos reservados á TATEC LTDA</p>
+            <p>© 2026 TATEC LTDA. Todos os direitos reservados.</p>
+            <ul class="direitos-links">
+                <li><button type="button" data-cookies>Gerenciar cookies</button></li>
+            </ul>
         </div>
     </footer>
 
