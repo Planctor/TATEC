@@ -2146,10 +2146,10 @@ html {
     }
   }
 
-  /* manifesto vira cena fixa: a seção tem 3 telas de altura, o texto fica parado no meio
+  /* manifesto vira cena fixa: a seção tem ~1,7 tela de altura, o texto fica parado no meio
      e cada linha acende na sua vez enquanto se rola (só onde há suporte; sem ele, seção normal) */
   .manifesto {
-    height: 300svh;
+    height: 170svh;
     padding-block: 0;
     view-timeline: --manifesto block;
   }
@@ -2167,13 +2167,13 @@ html {
     color: rgba(255, 255, 255, 0.36);
     animation: acender linear both, deslizar var(--ease-out) both;
     animation-timeline: --manifesto, --manifesto;
-    /* "contain" = o trecho em que a cena está presa na tela; cada linha ocupa ~1/4 dele */
-    animation-range: contain var(--de, 2%) contain var(--ate, 20%);
+    /* "contain" = o trecho em que a cena está presa na tela; as linhas se sobrepõem para o ritmo ficar corrido */
+    animation-range: contain var(--de, 0%) contain var(--ate, 25%);
   }
 
-  .manifesto-lista li:nth-child(2) { --de: 24%; --ate: 42%; }
-  .manifesto-lista li:nth-child(3) { --de: 46%; --ate: 64%; }
-  .manifesto-lista li:nth-child(4) { --de: 68%; --ate: 86%; }
+  .manifesto-lista li:nth-child(2) { --de: 18%; --ate: 43%; }
+  .manifesto-lista li:nth-child(3) { --de: 36%; --ate: 61%; }
+  .manifesto-lista li:nth-child(4) { --de: 54%; --ate: 79%; }
 
   /* travelling: linhas alternadas entram de lados opostos */
   .manifesto-lista li:nth-child(even) {
@@ -2203,7 +2203,7 @@ html {
     opacity: 0.2;
     animation: acender-ponto linear both;
     animation-timeline: --manifesto;
-    animation-range: contain var(--ate, 20%) contain calc(var(--ate, 20%) + 4%);
+    animation-range: contain var(--ate, 25%) contain calc(var(--ate, 25%) + 4%);
   }
 
   /* textos sobem e aparecem ao entrar na tela, como nas páginas de produto.
@@ -2302,7 +2302,7 @@ html {
     .manifesto-lista li {
       animation: acender linear both;
       animation-timeline: --manifesto;
-      animation-range: contain var(--de, 2%) contain var(--ate, 20%);
+      animation-range: contain var(--de, 0%) contain var(--ate, 25%);
     }
   }
 

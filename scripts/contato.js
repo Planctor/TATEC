@@ -14,7 +14,11 @@ export default function contato() {
         status.textContent = 'Enviando…';
 
         try {
-            const resposta = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+            const resposta = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' }, // Formspree responde JSON em vez de redirecionar
+            });
             if (!resposta.ok) throw new Error(resposta.status);
             form.reset();
             status.dataset.estado = 'ok';
